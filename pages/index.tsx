@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/layout'
+import { getSortedPostsData } from '../lib/posts'
 
-const Home: NextPage = () => {
+export default function Home({ allPostsData }: { allPostsData: any[]}) {
   return (
     <Layout home>
       <Head>
@@ -12,8 +12,32 @@ const Home: NextPage = () => {
         <p>I&rsquo;m Jamie Perkins, a senior software engineer specializing in frontend development.</p>
         <p>Check out my open source work on <a href="http://github.com/inorganik" >github</a>, view my <a href="https://www.linkedin.com/in/jamierperkins/" >linkedIn</a>, or follow me on twitter <a href="https://twitter.com/inorganik" title="Twitter">@inorganik</a>. You can also <a href="mailto:jamie@inorganik.net">email me</a>.</p>
       </section>
+
+      <section className="mt-12">
+        <h2>Blog</h2>
+        <ul className="list-none m-0">
+          {allPostsData.map(({ id, date, title }) => (
+            <li className="mb-5" key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   )
 }
 
-export default Home
+// getStaticProps only runs server-side
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
