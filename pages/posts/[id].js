@@ -25,7 +25,7 @@ export default function Post({ postData }) {
     <Head>
       <title>{postData.title}</title>
     </Head>
-    <article className="unreset">
+    <article className="prose">
       <h1>{postData.title}</h1>
       <div className="text-current">
         <DateDisplay dateString={postData.date} />

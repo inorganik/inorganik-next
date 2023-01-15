@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
+import Link from 'next/link'
+import DateDisplay from '../components/date'
 
 export default function Home({ allPostsData }: { allPostsData: any[]}) {
   return (
@@ -18,11 +20,11 @@ export default function Home({ allPostsData }: { allPostsData: any[]}) {
         <ul className="list-none m-0">
           {allPostsData.map(({ id, date, title }) => (
             <li className="mb-5" key={id}>
-              {title}
+              <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className="text-black/50">
+                <DateDisplay dateString={date} />
+              </small>
             </li>
           ))}
         </ul>

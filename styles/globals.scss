@@ -2,17 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import './unreset';
-
 a {
   color: #0070f3;
   text-decoration: none;
-}
-
-@layer base {
-  ul, ol {
-    list-style: revert;
-    margin: revert;
-    padding: revert;
-  }
 }
