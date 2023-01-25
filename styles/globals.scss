@@ -2,7 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+.circuitree {
+  path {
+    fill: none;
+  }
 }
