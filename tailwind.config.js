@@ -14,7 +14,7 @@ module.exports = {
           accent: '#ff5638',
           neutral: '#33273F',
           'base-100': '#fff',
-          'base-content': '#4d63bc',
+          'base-content': '#5c5c5c',
         },
         inorganikDark: {
           primary: '#6e90da',

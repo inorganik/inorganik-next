@@ -2,11 +2,13 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.scss';
 import Link from 'next/link';
+import { GA_TRACKING_ID } from '../lib/ga';
 
 const name = 'Jamie Perkins';
 export const siteTitle = 'inorganik blog';
+import Script from 'next/script'
 
-export default function Layout({ children, home }: { children: React.ReactNode; home?: boolean }) {
+export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,6 +25,19 @@ export default function Layout({ children, home }: { children: React.ReactNode; 
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        
+        {/* google analytics */}
+        <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-2T7D0VR4NW" />
+        <Script strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', ${GA_TRACKING_ID}, {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </Head>
       <header className="flex flex-col items-center">
         {home ? (
