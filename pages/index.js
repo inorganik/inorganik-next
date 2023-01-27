@@ -7,35 +7,6 @@ import Circuitree from '../components/circuitree'
 
 
 export default function Home({ allPostsData }) {
-  
-  /*
-  <svg width="100%" height="100%">
-    <pattern id="pattern-checkers" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-        <rect x="0" y="0" width="1" height="1" />
-        <g transform="matrix(1,0,0,1,8,0)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-        <g transform="matrix(1,0,0,1,4,4)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-        <g transform="matrix(1,0,0,1,12,4)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-        <g transform="matrix(1,0,0,1,0,8)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-        <g transform="matrix(1,0,0,1,8,8)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-        <g transform="matrix(1,0,0,1,4,12)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-        <g transform="matrix(1,0,0,1,12,12)">
-            <rect fill="#58606b" x="0" y="0" width="1" height="1" />
-        </g>
-    </pattern>
-    <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-checkers)" />
-</svg> */
 
   return (
     <Layout home>
@@ -43,7 +14,6 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <Circuitree />
 
       <section className="text-lg">
         <p>I&rsquo;m Jamie Perkins, a senior software engineer specializing in frontend development.</p>

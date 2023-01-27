@@ -26,6 +26,10 @@ module.exports = {
         },
       },
     ],
+    darkTheme: 'inorganikDark',
+  },
+  fontFamily: {
+    sans: ['Work Sans', 'sans-serif'],
   },
   plugins: [
     require('@tailwindcss/typography'),

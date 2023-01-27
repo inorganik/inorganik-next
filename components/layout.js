@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from './layout.module.scss';
 import Link from 'next/link';
+import Circuitree from './circuitree';
 import { GA_TRACKING_ID } from '../lib/ga';
 
-const name = 'Jamie Perkins';
 export const siteTitle = 'inorganik blog';
 import Script from 'next/script'
+import Leaderline from './leaderline';
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="mb-6 mx-auto px-4 max-w-4xl">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -27,8 +27,8 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         
         {/* google analytics */}
-        <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-2T7D0VR4NW" />
-        <Script strategy="lazyOnload">
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2T7D0VR4NW" />
+        <Script strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -42,35 +42,16 @@ export default function Layout({ children, home }) {
       <header className="flex flex-col items-center">
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className="rounded-full"
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className="text-4xl">{name}</h1>
+            <Leaderline className="my-6" />
+            <Circuitree />
           </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className="rounded-full"
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className="text-2xl">
-              <Link href="/">
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
+        ) : ''}
+        <div className={ (home ? '' : 'mt-6') + ' w-full relative' }>
+          <Link href="/">
+            <Image src="/images/inorganik-produce.svg" width={259} height={63} priority className="absolute right-0 bottom-[4px] bg-base-100 pl-[10px]" alt="Inorganik Produce" />
+          </Link>
+          <Leaderline className="my-6" />
+        </div>
       </header>
       <main>{children}</main>
       {!home && (
