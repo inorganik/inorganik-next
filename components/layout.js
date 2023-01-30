@@ -2,21 +2,21 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Circuitree from './circuitree';
-import { GA_TRACKING_ID } from '../lib/ga';
 
 export const siteTitle = 'inorganik blog';
-import Script from 'next/script'
 import Leaderline from './leaderline';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="mb-6 mx-auto px-4 max-w-4xl">
+    <div className="mb-6 mx-auto px-4 max-w-4xl 2xl:max-w-none">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="The personal blog of Jamie Perkins"
         />
+        {/* this is being hosted on vercel, so we don't want to index it */}
+        <meta name="robots" content="noindex, nofollow" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -26,18 +26,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         
-        {/* google analytics */}
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2T7D0VR4NW" />
-        <Script strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', ${GA_TRACKING_ID}, {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
       </Head>
       <header className="flex flex-col items-center">
         {home ? (

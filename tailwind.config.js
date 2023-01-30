@@ -22,7 +22,7 @@ module.exports = {
           accent: '#ff5638',
           neutral: '#a9a9a9',
           'base-100': '#1c1c1c',
-          'base-content': '#a9a9a9',
+          'base-content': '#d7d7d7',
         },
       },
     ],
@@ -33,6 +33,24 @@ module.exports = {
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
       },
+      fontSize: {
+        '4xl': ['2.25rem', {
+          lineHeight: '3rem',
+        }],
+        '6xl': ['3.75rem', {
+          lineHeight: '5rem',
+        }],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontWeight: '200',
+              letterSpacing: '0.025em',
+            },
+          },
+        },
+      }
     }
   },
   plugins: [

@@ -3,7 +3,6 @@ import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import DateDisplay from '../components/date'
-import Circuitree from '../components/circuitree'
 
 
 export default function Home({ allPostsData }) {
@@ -14,9 +13,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-
-      <section className="text-lg">
-        <p>I&rsquo;m Jamie Perkins, a senior software engineer specializing in frontend development.</p>
+      <section className="prose max-w-none">
+        <h1 className="text-2xl sm:text-4xl 2xl:text-6xl">I&rsquo;m Jamie Perkins, a senior software engineer specializing in frontend development.</h1>
         <p>Check out my open source work on <a href="http://github.com/inorganik" >github</a>, view my <a href="https://www.linkedin.com/in/jamierperkins/" >linkedIn</a>, or follow me on twitter <a href="https://twitter.com/inorganik" title="Twitter">@inorganik</a>. You can also <a href="mailto:jamie@inorganik.net">email me</a>.</p>
       </section>
 

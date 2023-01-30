@@ -14,24 +14,23 @@ export default function Circuitree() {
     circuitree_phase4;
 
   async function initCircuitree() {
-    if (typeof window !== undefined) {
-      const lpOptions = {
-        strokeWidth: 2,
-        strokeColor: '#8cc448',
-        speedMultiplier: 1,
-        drawSequential: false,
-      }
-      const LazyLinePainter = (await import('lazy-line-painter')).default;
-      circuitree_phase1 = new LazyLinePainter(circuitree1.current, lpOptions);
-      circuitree_phase2 = new LazyLinePainter(circuitree2.current, { ...lpOptions, delay: 500 });
-      circuitree_phase3 = new LazyLinePainter(circuitree3.current, { ...lpOptions, delay: 1200 });
-      circuitree_phase4 = new LazyLinePainter(circuitree4.current, { ...lpOptions, delay: 1700 });
-
-      paint();
+    const lpOptions = {
+      strokeWidth: 2,
+      strokeColor: '#8cc448',
+      speedMultiplier: 1,
+      drawSequential: false,
     }
+    const LazyLinePainter = (await import('lazy-line-painter')).default;
+    circuitree_phase1 = new LazyLinePainter(circuitree1.current, lpOptions);
+    circuitree_phase2 = new LazyLinePainter(circuitree2.current, { ...lpOptions, delay: 500 });
+    circuitree_phase3 = new LazyLinePainter(circuitree3.current, { ...lpOptions, delay: 1200 });
+    circuitree_phase4 = new LazyLinePainter(circuitree4.current, { ...lpOptions, delay: 1700 });
+
+    paint();
   }
 
   function paint() {
+    if (!circuitree_phase1) return;
     circuitree_phase1.paint();
     circuitree_phase2.paint();
     circuitree_phase3.paint();
