@@ -11,12 +11,12 @@
   //   --color-background: 255 255 255;
   // }
 
+  // doesn't work
   // @media (prefers-color-scheme: dark) {
   //   --color-primary: 110 144 218;
   //   --color-secondary: 140 196 72;
   //   --color-background: 28 28 28;
   // }
-
   
   h1 {
     @apply font-extralight tracking-wide leading-normal;
