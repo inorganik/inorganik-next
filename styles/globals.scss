@@ -5,7 +5,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,700;1,400&display=swap');
 
 @layer base {
+  // :root {
+  //   --color-primary: 77 99 188;
+  //   --color-secondary: 139 197 63;
+  //   --color-background: 255 255 255;
+  // }
+
+  // @media (prefers-color-scheme: dark) {
+  //   --color-primary: 110 144 218;
+  //   --color-secondary: 140 196 72;
+  //   --color-background: 28 28 28;
+  // }
+
+  
   h1 {
     @apply font-extralight tracking-wide leading-normal;
+  }
+  h4 {
+    @apply font-bold uppercase;
   }
 }

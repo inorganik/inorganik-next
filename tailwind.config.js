@@ -17,8 +17,8 @@ module.exports = {
           'base-content': '#5c5c5c',
         },
         inorganikDark: {
-          primary: '#6e90da',
-          secondary: '#8cc448',
+          primary: '#8cc448',
+          secondary: '#6e90da',
           accent: '#ff5638',
           neutral: '#a9a9a9',
           'base-100': '#1c1c1c',
@@ -27,9 +27,15 @@ module.exports = {
       },
     ],
     darkTheme: 'inorganikDark',
+    logs: false
   },
   theme: {
     extend: {
+      // colors: {
+      //   primary: 'rgb(var(--color-primary) / <alpha-value>)',
+      //   secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+      //   background: 'rgb(var(--color-background) / <alpha-value>)',
+      // },
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
       },

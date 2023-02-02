@@ -8,7 +8,7 @@ import Leaderline from './leaderline';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="mb-6 mx-auto px-4 max-w-4xl 2xl:max-w-none">
+    <div className="mb-6 mx-auto px-4 max-w-4xl">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
