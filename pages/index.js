@@ -25,7 +25,6 @@ export default function Home({ allPostsData }) {
         <div className="col-span-2 sm:col-span-3">
           <h4>Latest posts</h4>
           <ul className="list-none m-0 p-0">
-            
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
                 <p className="text-xl mb-0">
@@ -33,10 +32,9 @@ export default function Home({ allPostsData }) {
                 </p>
                 <DateDisplay dateString={date} />
               </li>
-            )).slice(0, 2)}
+            )).slice(0, 3)}
           </ul>
         </div>
-
         <Sidebar />
         <MyApps />
       </section>

@@ -18,7 +18,7 @@ export default function MyApps({ imageUrl, color, label, link }) {
     }
   ];
   return (
-    <>
+    <div>
       <h4>My Apps</h4>
       {apps.map(({ imageUrl, color, label, link }) => (
         <Link key={label} href={link} className="block my-6">
@@ -31,6 +31,6 @@ export default function MyApps({ imageUrl, color, label, link }) {
           {/* <p className="text-center mt-0 mb-6 w-24">{label}</p> */}
         </Link>
       ))}
-    </>
+    </div>
   );
 }
