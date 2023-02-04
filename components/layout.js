@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Circuitree from './circuitree';
 
-export const siteTitle = 'inorganik blog';
+export const siteTitle = 'inorganik produce, inc 👾';
 import Leaderline from './leaderline';
 
 export default function Layout({ children, home }) {
@@ -13,7 +13,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="The personal blog of Jamie Perkins"
+          content="I'm Jamie Perkins, a senior software engineer specializing in frontend development."
         />
         {/* this is being hosted on vercel, so we don't want to index it */}
         <meta name="robots" content="noindex, nofollow" />

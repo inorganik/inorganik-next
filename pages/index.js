@@ -18,11 +18,14 @@ export default function Home({ allPostsData }) {
       <section className="max-w-none">
         <h1 className="text-2xl sm:text-4xl">I&rsquo;m Jamie Perkins, a senior software engineer specializing in frontend development.</h1>
       </section>
+
       <Leaderline className="my-6" />
+
       <section className="prose max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div className="col-span-2 sm:col-span-3">
           <h4>Latest posts</h4>
           <ul className="list-none m-0 p-0">
+            
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
                 <p className="text-xl mb-0">
@@ -33,9 +36,11 @@ export default function Home({ allPostsData }) {
             )).slice(0, 2)}
           </ul>
         </div>
+
         <Sidebar />
         <MyApps />
       </section>
+
     </Layout>
   )
 }

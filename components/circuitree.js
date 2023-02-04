@@ -38,7 +38,7 @@ export default function Circuitree() {
   }
 
   function paint() {
-    if (!circuitree_phase1) return;
+    if (!circuitree_phase1) initCircuitree();
     circuitree_phase1.paint();
     circuitree_phase2.paint();
     circuitree_phase3.paint();
