@@ -1,14 +1,19 @@
-import Head from "next/head";
-import { useEffect } from "react";
+import Head from 'next/head';
+import { useEffect } from 'react';
 
-export default function Nomaste() {
+export default function NomasteLayout({ children }) {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'nomaste');
+    return () => {
+      document.documentElement.removeAttribute('data-theme');
+    }
   }, []);
 
   return (
-    <div className="mb-6 mx-auto px-4 max-w-7xl">
+    <div className="mb-6 mx-auto px-4 w-full sm:max-w-7xl">
+
       <Head>
+        <title>Nomaste - for Android and iOS</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -18,16 +23,13 @@ export default function Nomaste() {
         <meta name="robots" content="noindex, nofollow" />
         <meta
           property="og:image"
-          content="https://inorganik.net/images/nomaste-site-preview.png"
+          content="https://inorganik.net/images/nomaste/nomaste-site-preview.png"
         />
         <meta name="og:title" content="Nomaste - for Android and iOS" />
-        <meta name="twitter:card" content="summary_large_image" />
-        
+        <meta name="twitter:card" content="summary_large_image" />        
       </Head>
 
-      <main className="app h-screen">
-
-      </main>
+      <main className="app">{children}</main>
     </div>
   );
 }
