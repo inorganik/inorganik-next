@@ -39,6 +39,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens: {
+        lg: '1030px', // big enough to exclude iPad Pro portrait
+      },
       // colors: {
       //   primary: 'rgb(var(--color-primary) / <alpha-value>)',
       //   secondary: 'rgb(var(--color-secondary) / <alpha-value>)',

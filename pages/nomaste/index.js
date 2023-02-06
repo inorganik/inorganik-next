@@ -6,9 +6,9 @@ import NomasteLayout from '../../components/layout-nomaste';
 export default function Nomaste() {
 
   return <NomasteLayout>
-    <section className="h-[90vh] items-center grid lg:grid-cols-2">
+    <section className="lg:h-[90vh] items-center grid lg:grid-cols-2 lg:min-h-[800px]">
       <div>
-        <Image src="/images/nomaste/nomaste-logo-for-splash.svg" width={522} height={168} priority className="mx-auto mt-10 mb-6 sm: mt-0 sm:mb-14" />
+        <Image src="/images/nomaste/nomaste-logo-for-splash.svg" width={522} height={168} priority className="mx-auto mt-10 mb-6 lg:mt-0 sm:mb-14" alt="Nomaste" />
 
         <div className="my-4 sm:my-8 py-7 flex justify-center">
           <a className="mx-4" href="https://apps.apple.com/us/app/nomaste-plan-share-dinners/id1594680305"><img src="../images/app-store-badge.svg" className="w-auto h-16" alt="Download on the App Store" /></a>
@@ -24,9 +24,9 @@ export default function Nomaste() {
 
       <div>
         <div className="relative h-[560px] w-[350px] sm:w-[580px] sm:h-[810px] lg:w-full m-auto">
-          <img src="../images/nomaste/Nomaste-on-Android-mock-2.png" alt="Nomaste on Android"
+          <Image src="/images/nomaste/Nomaste-on-Android-mock-2.png" width={405} height={799} alt="Nomaste on Android"
             className="absolute w-[250px] sm:w-[405px] z-40" />
-          <img src="../images/nomaste/Nomaste-on-iPhone-mock-2.png" alt="Nomaste on iPhone"
+          <Image src="/images/nomaste/Nomaste-on-iPhone-mock-2.png" width={400} height={770} alt="Nomaste on iPhone"
             className="absolute top-[40px] left-[98px] w-[250px] md:left-[200px] md:w-[400px] z-50" />
         </div>
       </div>
