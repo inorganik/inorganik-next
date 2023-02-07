@@ -9,13 +9,14 @@ import Leaderline from './leaderline';
 export default function Layout({ children, home }) {
   return (
     <div className="mb-6 mx-auto px-4 max-w-4xl">
+
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="I'm Jamie Perkins, a senior software engineer specializing in frontend development."
         />
-        {/* this is being hosted on vercel, so we don't want to index it */}
+        {/* this is being hosted on vercel, so we don't want to index it yet */}
         <meta name="robots" content="noindex, nofollow" />
         <meta
           property="og:image"
@@ -23,8 +24,8 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        
       </Head>
+
       <header className="flex flex-col items-center">
         {home ? (
           <>

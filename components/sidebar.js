@@ -13,7 +13,7 @@ export default function Sidebar() {
       <ul>
         {links.map(({ href, label }) => (
           <li key={label}>
-            <a className="text-primary" href={href}>{label}</a>
+            <a className="text-primary hover-glow" href={href}>{label}</a>
           </li>
         ))}
       </ul>

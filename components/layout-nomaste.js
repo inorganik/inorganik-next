@@ -19,7 +19,7 @@ export default function NomasteLayout({ children }) {
           name="description"
           content="It's never been easier to figure out what's for dinner."
         />
-        {/* this is being hosted on vercel, so we don't want to index it */}
+        {/* this is being hosted on vercel, so we don't want to index it yet */}
         <meta name="robots" content="noindex, nofollow" />
         <meta
           property="og:image"

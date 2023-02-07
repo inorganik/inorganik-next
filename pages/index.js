@@ -28,7 +28,7 @@ export default function Home({ allPostsData }) {
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
                 <p className="text-xl mb-0">
-                  <Link className="no-underline font-extralight" href={`/posts/${id}`}><span className="text-primary">→</span> {title}</Link>
+                  <Link className="hover-glow no-underline font-extralight" href={`/posts/${id}`}><span className="text-primary">→</span> {title}</Link>
                 </p>
                 <DateDisplay dateString={date} />
               </li>

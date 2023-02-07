@@ -24,6 +24,7 @@
   h4 {
     @apply font-bold uppercase;
   }
+
 }
 
 @keyframes fadeInContent {
@@ -39,4 +40,24 @@
 
 main.app {
   animation: fadeInContent 0.5s ease-in-out;
+}
+
+a.hover-glow {
+  transition: all 0.2s linear;
+
+  &:hover {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.75));
+
+    @media (prefers-color-scheme: dark) {
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
+    }
+  }
+
+  &.text-primary:hover {
+    filter: drop-shadow(0 0 5px rgba(77, 99, 188, 0.75));
+
+    @media (prefers-color-scheme: dark) {
+      filter: drop-shadow(0 0 5px rgba(140, 196, 72, 0.75));
+    }
+  }
 }
