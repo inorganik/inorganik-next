@@ -1,10 +1,12 @@
+import { supportMailLink } from "../lib/utils";
+
 export default function Sidebar() {
   
   const links = [
     { href: 'http://github.com/inorganik', label: 'github' },
     { href: 'https://www.linkedin.com/in/jamierperkins/', label: 'linkedin' },
     { href: 'https://twitter.com/inorganik', label: '@inorganik' },
-    { href: 'mailto:jamie@inorganik.net', label: 'email' },
+    { href: supportMailLink, label: 'email' },
   ];
 
   return (

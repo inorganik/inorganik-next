@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import NomasteLayout from '../../components/layout-nomaste';
-
+import { supportMailLink } from '../../lib/utils';
 
 export default function Nomaste() {
 
@@ -33,7 +33,7 @@ export default function Nomaste() {
     </section>
 
     <section>
-      <p className="text-center">Questions or comments? Please <a className="underline" href="mailto:jamie@inorganikproduce.com">email support</a>.<br />
+      <p className="text-center">Questions or comments? Please <a className="underline" href={supportMailLink}>email support</a>.<br />
         <Link className="underline" href="/nomaste/privacy">Privacy policy</Link>
       </p>
     </section>

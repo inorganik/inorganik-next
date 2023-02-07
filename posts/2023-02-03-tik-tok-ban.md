@@ -3,10 +3,10 @@ title: "Banning apps? Is this the CCP?"
 date: '2023-02-03'
 ---
 
-Recently several Democratic senators have joined with several Republicans in requesting Google and Apple to [ban Tik Tok](https://www.wsj.com/articles/tiktok-dealt-another-hit-as-democratic-senator-joins-calls-for-banning-the-app-11675301647) from their app stores. They claim it could be "weaponized". In doing so, these politicians are trying to employ the same censorship tactics of the very government it's trying to protect us from.
+Recently several Democratic senators joined with several Republicans in requesting Google and Apple [ban Tik Tok](https://www.wsj.com/articles/tiktok-dealt-another-hit-as-democratic-senator-joins-calls-for-banning-the-app-11675301647) from their app stores. They claim it could be "weaponized". In doing so, these politicians seek to employ the same censorship tactics of the very government it's trying to protect us from.
 
-The CCP's dubious behaviors shouldn't implicate TikTok, anymore than what the US government does implicates big tech. ([Twitterfiles](https://twitter.com/hashtag/TwitterFiles) notwithstanding).
+Yes, Tik Tok answers to the CCP, but it doesn't drive their bottom line. All US tech companies answer to the US govt as well. They comply with many requests from the govt as the twitter files have exposed. That does not make them bad. 
 
-App store bans would set a dangerous precedent. Any time the government doesn't like an app, they will again call on tech giants to ban it. That could have negative repercussions for app stores, since people will opt to use the internet instead of apps. 
+Also I fail to see how mindless shorts will manipulate the masses. But I'd love to hear someone pitch it to me! The main thing here is that people are proposing censorship. That is archaic and un-American, I won't abide by it.
 
-Tik Tok is consistently among the top free apps, and it's unlikely that a few out-of-touch politicians will succeed in banning it. But still, it's sad to see our politicians attempt to use the antiquated, authoritarian act of banning something. 
+If app stores employ bans at the behest of the government, people will opt to use the internet instead. Bye, app stores. 
