@@ -1,6 +1,6 @@
 import { supportMailLink } from "../lib/utils";
 
-export default function Sidebar() {
+export default function MyLinks() {
   
   const links = [
     { href: 'http://github.com/inorganik', label: 'github' },
@@ -10,8 +10,8 @@ export default function Sidebar() {
   ];
 
   return (
-    <div>
-      <h4>Links</h4>
+    <div className="mb-6 sm:pl-12">
+      <h4 className="mt-0">Links</h4>
       <ul>
         {links.map(({ href, label }) => (
           <li key={label}>

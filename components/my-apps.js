@@ -1,25 +1,24 @@
 import Link from 'next/link'
 
-
-export default function MyApps({ imageUrl, color, label, link }) {
+export default function MyApps() {
 
   const apps = [
     { 
       imageUrl: '/images/nomaste-app-icon-inner.png',
       color: '#ff5638',
       label: 'Nomaste',
-      link: '/nomaste', // todo, change?
+      link: '/nomaste',
     },
     {
       imageUrl: '/images/ghost-ar-app-icon-inner.png',
       color: '#000',
       label: 'Ghost AR',
-      link: '/ghost-ar', // todo change?
+      link: '/ghost-ar',
     }
   ];
   return (
-    <div>
-      <h4>My Apps</h4>
+    <div className="sm:pl-12">
+      <h4 className="mt-0">My Apps</h4>
       {apps.map(({ imageUrl, color, label, link }) => (
         <Link key={label} href={link} className="block my-6">
           <div className="relative w-24">

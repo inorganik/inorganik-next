@@ -19,7 +19,6 @@ export default function GhostAr() {
   async function initFlickity() {
     if (typeof window !== 'undefined' && carousel.current) {
       const Flickity = (await import('flickity')).default;
-      console.log('init flickity');
       new Flickity(carousel.current, {
         lazyLoad: true,
         wrapAround: true,

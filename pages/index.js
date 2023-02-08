@@ -4,8 +4,8 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import DateDisplay from '../components/date'
 import Leaderline from '../components/leaderline'
-import Sidebar from '../components/sidebar'
-import MyApps from '../components/my-apps'
+import MyLinks from '../components/my-links';
+import MyApps from '../components/my-apps';
 
 
 export default function Home({ allPostsData }) {
@@ -21,9 +21,9 @@ export default function Home({ allPostsData }) {
 
       <Leaderline className="my-6" />
 
-      <section className="prose max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="col-span-2 sm:col-span-3">
-          <h4>Latest posts</h4>
+      <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
+          <h4 className="mt-0">Latest posts</h4>
           <ul className="list-none m-0 p-0">
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
@@ -32,10 +32,10 @@ export default function Home({ allPostsData }) {
                 </p>
                 <DateDisplay dateString={date} />
               </li>
-            )).slice(0, 3)}
+            )).slice(0, 4)}
           </ul>
         </div>
-        <Sidebar />
+        <MyLinks />
         <MyApps />
       </section>
 
