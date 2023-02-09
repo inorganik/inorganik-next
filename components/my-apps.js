@@ -20,7 +20,7 @@ export default function MyApps() {
     <div className="sm:pl-12">
       <h4 className="mt-0">My Apps</h4>
       {apps.map(({ imageUrl, color, label, link }) => (
-        <Link key={label} href={link} className="block my-6">
+        <Link key={label} href={link} className="block my-6 hover-glow">
           <div className="relative w-24">
             <img src={imageUrl} alt={label} className="absolute w-full h-full m-0" />
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="608" height="608" viewBox="-302 -302 608 608">
