@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Subhead from './subhead';
 
 export default function MyApps() {
 
@@ -18,7 +19,7 @@ export default function MyApps() {
   ];
   return (
     <div className="sm:pl-12">
-      <h4 className="mt-0">My Apps</h4>
+      <Subhead title="My apps" />
       {apps.map(({ imageUrl, color, label, link }) => (
         <Link key={label} href={link} className="block my-6 hover-glow">
           <div className="relative w-24">

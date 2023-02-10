@@ -1,47 +1,17 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
+import { socialLinks, projects, githubLinks } from '../lib/utils'
 import Link from 'next/link'
 import DateDisplay from '../components/date'
 import Leaderline from '../components/leaderline'
-import MyLinks from '../components/my-links';
-import MyApps from '../components/my-apps';
+import LinkList from '../components/link-list'
+import MyApps from '../components/my-apps'
 import ProjectCard from '../components/project-card'
+import Subhead from '../components/subhead'
 
 export default function Home({ allPostsData }) {
-  const projects = [
-    {
-      link: 'https://pod.fan',
-      imageUrl: '/images/project-podfan.png',
-      label: 'Podfan',
-      description: 'Podfan is a private podcasting platform I bootstrapped and launched in September of 2019. Podcasts can accept recurring donations and offer paid podcasts with 1-click subscribe for listeners. I sold the project on Microns in September of 2021. It has since been redesigned by the new owner.',
-    },
-    {
-      link: 'https://podcasts.apple.com/us/podcast/the-super-sampler/id1519630460',
-      imageUrl: '/images/project-super-sampler.png',
-      label: 'The Super Sampler',
-      description: 'The Super Sampler is a podcast that anyone can publish a short teaser episode of their show to, when they sign up for Podfan. This helps new podcasters get exposure, and curious listeners can sample lots of new shows in less time, all while driving traffic to Podfan.',
-    },
-    {
-      link: 'https://podmap.pod.fan',
-      imageUrl: '/images/project-podmap.png',
-      label: 'Podmap',
-      description: 'Podmap was an open-source project I created in 2018 with the goal of mapping the world\'s podcasts. It also created awareness of Podfan. Anyone could submit their podcast and I manually approved each one. The project mapped over 3200 podcasts from all over the world.',
-    },
-    {
-      link: 'https://inorganik.github.io/mapover',
-      imageUrl: '/images/project-mapover.png',
-      label: 'Mapover',
-      description: 'Mapover lets you overlay 2 locations with minimalistic maps. Not only does it create interesting visuals, but it provides an often surprising size comparison. Mapover is open-source.',
-    },
-    {
-      link: 'https://www.producthunt.com/products/tung#tung-2', 
-      imageUrl: '/images/project-tung.png',
-      label: 'Tung',
-      description: 'Tung was the first social podcast app for iOS, which I launched in 2016. Not only a podcast player, it was a discovery engine with a social feed where users could recommend episodes, and share timestamped comments and audio clips from podcasts.',
-    }
-  ];
-
+  
   return (
     <Layout home>
       <Head>
@@ -56,7 +26,15 @@ export default function Home({ allPostsData }) {
 
       <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-4">
-          <h4 className="mt-0">Latest posts</h4>
+          
+          <Subhead title="Past projects" />
+          <div className="divide-y divide-neutral divide-dotted mb-12">
+            {projects.map((project) => (
+              <ProjectCard key={project.label} {...project} />
+            ))}
+          </div>
+
+          <Subhead title="Latest posts" />
           <ul className="list-none m-0 p-0">
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
@@ -68,16 +46,10 @@ export default function Home({ allPostsData }) {
             )).slice(0, 4)}
           </ul>
 
-          <h4 className="mt-12">Past projects</h4>
-          <div className="divide-y">
-            {projects.map((project) => (
-              <ProjectCard key={project.label} {...project} />
-            ))}
-          </div>
-
         </div>
-        <MyLinks />
+        <LinkList title="Links" links={socialLinks} />
         <MyApps />
+        <LinkList title="Open source" links={githubLinks} />
       </section>
 
     </Layout>

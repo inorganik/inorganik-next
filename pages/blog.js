@@ -1,10 +1,11 @@
 import Layout from '../components/layout'
 import Head from 'next/head'
-import MyLinks from '../components/my-links'
+import LinkList from '../components/link-list'
 import MyApps from '../components/my-apps'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import DateDisplay from '../components/date'
+import { socialLinks } from '../lib/utils'
 
 
 export default function AllPosts({ allPostsData }) {
@@ -26,7 +27,7 @@ export default function AllPosts({ allPostsData }) {
           ))}
         </ul>
       </div>
-      <MyLinks />
+      <LinkList title="links" links={socialLinks} />
       <MyApps />
     </section>
   </Layout>;

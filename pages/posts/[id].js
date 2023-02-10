@@ -2,8 +2,9 @@ import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import DateDisplay from '../../components/date';
-import MyLinks from '../../components/my-links';
+import LinkList from '../../components/link-list';
 import MyApps from '../../components/my-apps';
+import { socialLinks } from '../../lib/utils'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -36,7 +37,7 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      <MyLinks />
+      <LinkList title="Links" links={socialLinks} />
       <MyApps />
     </section>
   </Layout>;
