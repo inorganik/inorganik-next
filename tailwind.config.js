@@ -73,6 +73,7 @@ module.exports = {
               fontWeight: '200',
               letterSpacing: '0.025em',
             },
+            // p: { color: 'hsl(var(--bc))' },
           },
         },
       }

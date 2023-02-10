@@ -11,11 +11,11 @@ import { socialLinks } from '../lib/utils'
 export default function AllPosts({ allPostsData }) {
   return <Layout>
     <Head>
-      <title>All posts</title>
+      <title>Blog</title>
     </Head>
     <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
-        <h1>All posts</h1>
+        <h1>Blog</h1>
         <ul className="list-none m-0 p-0">
           {allPostsData.map(({ id, date, title }) => (
             <li className="mb-5 pl-0" key={id}>

@@ -9,6 +9,7 @@ import LinkList from '../components/link-list'
 import MyApps from '../components/my-apps'
 import ProjectCard from '../components/project-card'
 import Subhead from '../components/subhead'
+import MusicFavs from '../components/music-favs'
 
 export default function Home({ allPostsData }) {
   
@@ -25,7 +26,7 @@ export default function Home({ allPostsData }) {
       <Leaderline className="my-6" />
 
       <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-4">
+        <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
           
           <Subhead title="Past projects" />
           <div className="divide-y divide-neutral divide-dotted mb-12">
@@ -50,6 +51,7 @@ export default function Home({ allPostsData }) {
         <LinkList title="Links" links={socialLinks} />
         <MyApps />
         <LinkList title="Open source" links={githubLinks} />
+        {/* <MusicFavs /> */}
       </section>
 
     </Layout>
