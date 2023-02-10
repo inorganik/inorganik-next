@@ -14,13 +14,31 @@ export default function Home({ allPostsData }) {
       link: 'https://pod.fan',
       imageUrl: '/images/project-podfan.png',
       label: 'Podfan',
-      description: 'Podfan is a private podcasting platform I bootstrapped and launched in September of 2019. Podcasts can accept recurring donations and offer paid podcasts with 1-click subscribe for listeners. I sold the project on Microns in September of 2021. It has since been redesigned.',
+      description: 'Podfan is a private podcasting platform I bootstrapped and launched in September of 2019. Podcasts can accept recurring donations and offer paid podcasts with 1-click subscribe for listeners. I sold the project on Microns in September of 2021. It has since been redesigned by the new owner.',
+    },
+    {
+      link: 'https://podcasts.apple.com/us/podcast/the-super-sampler/id1519630460',
+      imageUrl: '/images/project-super-sampler.png',
+      label: 'The Super Sampler',
+      description: 'The Super Sampler is a podcast that anyone can publish a short teaser episode of their show to, when they sign up for Podfan. This helps new podcasters get exposure, and curious listeners can sample lots of new shows in less time, all while driving traffic to Podfan.',
+    },
+    {
+      link: 'https://podmap.pod.fan',
+      imageUrl: '/images/project-podmap.png',
+      label: 'Podmap',
+      description: 'Podmap was an open-source project I created in 2018 with the goal of mapping the world\'s podcasts. It also created awareness of Podfan. Anyone could submit their podcast and I manually approved each one. The project mapped over 3200 podcasts from all over the world.',
     },
     {
       link: 'https://inorganik.github.io/mapover',
       imageUrl: '/images/project-mapover.png',
       label: 'Mapover',
-      description: 'Overlay 2 locations with minimalistic maps. Not only does it create interesting visuals, but it provides an often surprising size comparison.',
+      description: 'Mapover lets you overlay 2 locations with minimalistic maps. Not only does it create interesting visuals, but it provides an often surprising size comparison. Mapover is open-source.',
+    },
+    {
+      link: 'https://www.producthunt.com/products/tung#tung-2', 
+      imageUrl: '/images/project-tung.png',
+      label: 'Tung',
+      description: 'Tung was the first social podcast app for iOS, which I launched in 2016. Not only a podcast player, it was a discovery engine with a social feed where users could recommend episodes, and share timestamped comments and audio clips from podcasts.',
     }
   ];
 
@@ -49,9 +67,6 @@ export default function Home({ allPostsData }) {
               </li>
             )).slice(0, 4)}
           </ul>
-          <p className="mt-6">
-            <Link href="/all-posts">All posts</Link>
-          </p>
 
           <h4 className="mt-12">Past projects</h4>
           <div className="divide-y">

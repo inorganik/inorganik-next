@@ -2,11 +2,14 @@ import { supportMailLink } from "../lib/utils";
 
 export default function MyLinks() {
   
+  // todo: turn this into LinkList and have it accept title and links as props
+  // display open source as separate list
   const links = [
     { href: 'http://github.com/inorganik', label: 'github' },
     { href: 'https://www.linkedin.com/in/jamierperkins/', label: 'linkedin' },
     { href: 'https://twitter.com/inorganik', label: '@inorganik' },
     { href: supportMailLink, label: 'email' },
+    { href: '/all-posts', label: 'all posts' },
   ];
 
   return (
