@@ -29,7 +29,7 @@ export default function Post({ postData }) {
       <title>{postData.title}</title>
     </Head>
 
-    <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-6">
+    <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
       <article className="col-span-2 sm:col-span-3 row-auto sm:row-span-3">
         <h1>{postData.title}</h1>
         <div className="text-current">

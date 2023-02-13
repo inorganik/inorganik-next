@@ -3,7 +3,7 @@ import Subhead from './subhead'
 export default function LinkList({ title, links }) {
 
   return (
-    <div className="sm:pl-12">
+    <div>
       <Subhead title={title} />
       <ul>
         {links.map(({ href, label }) => (

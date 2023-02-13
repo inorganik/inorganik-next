@@ -18,7 +18,7 @@ export default function MyApps() {
     }
   ];
   return (
-    <div className="sm:pl-12">
+    <div>
       <Subhead title="My apps" />
       {apps.map(({ imageUrl, color, label, link }) => (
         <Link key={label} href={link} className="block my-6 hover-glow">

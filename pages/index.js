@@ -25,27 +25,27 @@ export default function Home({ allPostsData }) {
 
       <Leaderline className="my-6" />
 
-      <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
-          
-          <Subhead title="Past projects" />
-          <div className="divide-y divide-neutral divide-dotted mb-12">
-            {projects.map((project) => (
-              <ProjectCard key={project.label} {...project} />
-            ))}
-          </div>
 
           <Subhead title="Latest posts" />
-          <ul className="list-none m-0 p-0">
+          <ul className="list-none p-0 mb-12">
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
-                <p className="text-xl mb-0">
+                <p className="text-2xl mb-0">
                   <Link className="hover-glow no-underline font-extralight" href={`/posts/${id}`}><span className="text-primary">→</span> {title}</Link>
                 </p>
                 <DateDisplay dateString={date} />
               </li>
             )).slice(0, 4)}
           </ul>
+                    
+          <Subhead title="Past projects" />
+          <div className="divide-y divide-neutral divide-dotted mb-12">
+            {projects.map((project) => (
+              <ProjectCard key={project.label} {...project} />
+            ))}
+          </div>
 
         </div>
         <LinkList title="Links" links={socialLinks} />
