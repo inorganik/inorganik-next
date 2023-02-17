@@ -4,7 +4,7 @@ import Head from 'next/head';
 import DateDisplay from '../../components/date';
 import LinkList from '../../components/link-list';
 import MyApps from '../../components/my-apps';
-import { socialLinks } from '../../lib/utils'
+import { socialLinks } from '../../lib/static-content'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();

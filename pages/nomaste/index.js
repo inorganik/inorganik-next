@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import NomasteLayout from '../../components/layout-nomaste';
-import { supportMailLink } from '../../lib/utils';
+import { supportMailLink } from '../../lib/static-content';
 
 export default function Nomaste() {
 

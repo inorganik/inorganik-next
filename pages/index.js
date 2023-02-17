@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
-import { socialLinks, projects, githubLinks } from '../lib/utils'
+import { socialLinks, projects, githubLinks } from '../lib/static-content'
 import Link from 'next/link'
 import DateDisplay from '../components/date'
 import Leaderline from '../components/leaderline'
@@ -28,7 +28,7 @@ export default function Home({ allPostsData }) {
       <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
 
-          <Subhead title="Latest posts" />
+          <Subhead title="Latest cold takes" />
           <ul className="list-none p-0 mb-12">
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>

@@ -5,17 +5,17 @@ import MyApps from '../components/my-apps'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import DateDisplay from '../components/date'
-import { socialLinks } from '../lib/utils'
+import { socialLinks } from '../lib/static-content'
 
 
 export default function AllPosts({ allPostsData }) {
   return <Layout>
     <Head>
-      <title>Blog</title>
+      <title>Cold takes</title>
     </Head>
     <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
-        <h1>Blog</h1>
+        <h1>Cold takes</h1>
         <ul className="list-none m-0 p-0">
           {allPostsData.map(({ id, date, title }) => (
             <li className="mb-5 pl-0" key={id}>

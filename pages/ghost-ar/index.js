@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useEffect, useRef } from 'react';
-import { supportMailLink } from '../../lib/utils';
+import { supportMailLink } from '../../lib/static-content';
 
 export default function GhostAr() {
   
