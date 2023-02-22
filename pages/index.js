@@ -9,7 +9,6 @@ import LinkList from '../components/link-list'
 import MyApps from '../components/my-apps'
 import ProjectCard from '../components/project-card'
 import Subhead from '../components/subhead'
-import MusicFavs from '../components/music-favs'
 
 export default function Home({ allPostsData }) {
   
@@ -32,10 +31,10 @@ export default function Home({ allPostsData }) {
           <ul className="list-none p-0 mb-12">
             {allPostsData.map(({ id, date, title }) => (
               <li className="mb-5 pl-0" key={id}>
-                <p className="text-2xl mb-0">
+                <p className="text-2xl mb-0 -indent-8 pl-8">
                   <Link className="hover-glow no-underline font-extralight" href={`/posts/${id}`}><span className="text-primary">→</span> {title}</Link>
                 </p>
-                <DateDisplay dateString={date} />
+                <DateDisplay dateString={date} shouldIndent={true} />
               </li>
             )).slice(0, 4)}
           </ul>
@@ -45,6 +44,19 @@ export default function Home({ allPostsData }) {
             {projects.map((project) => (
               <ProjectCard key={project.label} {...project} />
             ))}
+
+            {/* Mailchimp Signup Form */}
+            <div id="mc_embed_signup">
+              <p className="sm:text-xl">Get updates about what I&rsquo;m working on:</p>
+              <form className="flex" action="https://inorganik.us6.list-manage.com/subscribe/post?u=652faf8fd19848d965f2d07dd&amp;id=d5900362dc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" noValidate>
+                <input type="email" name="EMAIL" placeholder="Email" className="input input-sm input-bordered rounded-lg flex-grow max-w-xs" id="mce-EMAIL" />
+                <input type="submit" defaultValue="submit" name="subscribe" className="btn btn-sm btn-primary rounded-lg ml-3" id="mc-embedded-subscribe" />
+                {/* this prevents bot signups */}
+                <div className="absolute left-[-5000px]" aria-hidden="true">
+                  <input type="text" name="b_652faf8fd19848d965f2d07dd_d5900362dc" tabIndex="-1" defaultValue="" />
+                </div>
+              </form>
+            </div>
           </div>
 
         </div>
