@@ -20,7 +20,7 @@ export default function NomasteLayout({ children }) {
           content="It's never been easier to figure out what's for dinner."
         />
         {/* this is being hosted on vercel, so we don't want to index it yet */}
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <meta
           property="og:image"
           content="https://inorganik.net/images/nomaste/nomaste-site-preview.png"

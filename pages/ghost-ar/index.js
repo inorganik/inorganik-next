@@ -38,7 +38,7 @@ export default function GhostAr() {
           content="An augmented reality app for iOS that lets you see ghosts."
         />
         {/* this is being hosted on vercel, so we don't want to index it yet */}
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <meta
           property="og:image"
           content="https://inorganik.net/images/ghost-ar/ghost-ar-site-preview.png"

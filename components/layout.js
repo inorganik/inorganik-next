@@ -16,8 +16,7 @@ export default function Layout({ children, home }) {
           name="description"
           content="I'm Jamie Perkins, a senior software engineer specializing in frontend development."
         />
-        {/* this is being hosted on vercel, so we don't want to index it yet */}
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <meta
           property="og:image"
           content="https://inorganik.net/images/inorganik-produce-preview.png"
