@@ -8,7 +8,7 @@ import Leaderline from './leaderline';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="mb-6 mx-auto px-4 max-w-4xl relative">
+    <div className="mb-6 mx-auto px-4 max-w-4xl relative flex flex-col min-h-full">
 
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
         </div>
       </header>
 
-      <main>{children}</main>
+      <main className="flex flex-col flex-grow">{children}</main>
 
       <footer className="footer items-center opacity-60 py-6 mt-12 text-secondary">
         <p>{ new Date().getFullYear() } &copy; inorganik produce, inc.</p>

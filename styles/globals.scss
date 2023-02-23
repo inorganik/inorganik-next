@@ -39,6 +39,10 @@
 	}
 }
 
+html, body, div#__next {
+  height: 100%;
+}
+
 main.app {
   animation: fadeInContent 0.5s ease-in-out;
 }

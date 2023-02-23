@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
 
       <Leaderline className="my-6" />
 
-      <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
+      <section className="prose sm:mt-8 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
 
           <Subhead title="Latest cold takes" />

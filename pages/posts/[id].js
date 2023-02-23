@@ -51,7 +51,7 @@ export default function Post({ postData, prevId, nextId }) {
     </Head>
 
     <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
-      <article className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
+      <article className="col-span-2 sm:col-span-3 row-auto sm:row-span-3 flex flex-col">
         <h1>{postData.title}</h1>
         <div className="text-current">
           <DateDisplay dateString={postData.date} />
@@ -64,6 +64,7 @@ export default function Post({ postData, prevId, nextId }) {
 
       <div className="col-span-2 sm:col-span-3 mt-12 flex justify-between">
         { prevId && <Link href={`/posts/${prevId}`}>← Previous post</Link> }
+        <span className="flex-grow"></span>
         { nextId && <Link href={`/posts/${nextId}`}>Next post →</Link> }
       </div>
     </section>
