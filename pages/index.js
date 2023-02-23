@@ -2,13 +2,12 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 import { socialLinks, projects, githubLinks } from '../lib/static-content'
-import Link from 'next/link'
-import DateDisplay from '../components/date'
 import Leaderline from '../components/leaderline'
 import LinkList from '../components/link-list'
 import MyApps from '../components/my-apps'
 import ProjectCard from '../components/project-card'
 import Subhead from '../components/subhead'
+import PostList from '../components/post-list'
 
 export default function Home({ allPostsData }) {
   
@@ -28,16 +27,7 @@ export default function Home({ allPostsData }) {
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
 
           <Subhead title="Latest cold takes" />
-          <ul className="list-none p-0 mb-12">
-            {allPostsData.map(({ id, date, title }) => (
-              <li className="mb-5 pl-0" key={id}>
-                <p className="text-2xl mb-0 -indent-8 pl-8">
-                  <Link className="hover-glow no-underline font-extralight" href={`/posts/${id}`}><span className="text-primary">→</span> {title}</Link>
-                </p>
-                <DateDisplay dateString={date} shouldIndent={true} />
-              </li>
-            )).slice(0, 4)}
-          </ul>
+          <PostList allPostsData={allPostsData} limit={4} />
                     
           <Subhead title="Past projects" />
           <div className="divide-y divide-neutral divide-dotted mb-12">
@@ -47,7 +37,7 @@ export default function Home({ allPostsData }) {
 
             {/* Mailchimp Signup Form */}
             <div id="mc_embed_signup">
-              <p className="sm:text-xl">Get updates about what I&rsquo;m working on:</p>
+              <p className="sm:text-xl font-light"><strong>What&rsquo;s next?</strong> Get updates about what I&rsquo;m working on:</p>
               <form className="flex" action="https://inorganik.us6.list-manage.com/subscribe/post?u=652faf8fd19848d965f2d07dd&amp;id=d5900362dc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" noValidate>
                 <input type="email" name="EMAIL" placeholder="Email" className="input input-sm input-bordered rounded-lg flex-grow max-w-xs" id="mce-EMAIL" />
                 <input type="submit" defaultValue="submit" name="subscribe" className="btn btn-sm btn-primary rounded-lg ml-3" id="mc-embedded-subscribe" />
