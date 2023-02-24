@@ -19,6 +19,9 @@
   h1 {
     @apply font-extralight tracking-wide leading-normal;
   }
+  h2, h3 {
+    @apply font-light tracking-wide leading-normal;
+  }
 
 }
 

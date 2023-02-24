@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
 
           <Subhead title="Latest cold takes" />
-          <PostList allPostsData={allPostsData} limit={4} />
+          <PostList allPostsData={allPostsData} limit={3} />
                     
           <Subhead title="Past projects" />
           <div className="divide-y divide-neutral divide-dotted mb-12">

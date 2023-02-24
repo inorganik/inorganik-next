@@ -73,6 +73,12 @@ module.exports = {
               fontWeight: '200',
               letterSpacing: '0.025em',
             },
+            h2: {
+              fontWeight: '300',
+            },
+            h3: {
+              fontWeight: '300',
+            },
             // p: { color: 'hsl(var(--bc))' },
           },
         },
