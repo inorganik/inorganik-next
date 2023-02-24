@@ -6,11 +6,14 @@ export default function PostList({ allPostsData, limit = 0 }) {
   return (
     <ul className="list-none p-0 mb-12">
       {posts.map(({ id, date, title }) => (
-        <li className="mb-5 pl-0" key={id}>
-          <p className="text-2xl mb-0 -indent-8 pl-8">
-            <Link className="hover-glow no-underline font-light" href={`/posts/${id}`}><span className="text-primary">→</span> {title}</Link>
-          </p>
-          <DateDisplay dateString={date} shouldIndent={true} />
+        <li className="my-5 pl-0 flex items-start" key={id}>
+          <span className="text-2xl text-primary mr-2">→</span>
+          <div>
+            <p className="text-2xl m-0 -indent-8 pl-8">
+              <Link className="hover-glow no-underline font-light" href={`/posts/${id}`}>{title}</Link>
+            </p>
+            <DateDisplay dateString={date} />
+          </div>
         </li>
       )).slice(0, 4)}
     </ul>
