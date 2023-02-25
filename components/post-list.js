@@ -9,7 +9,7 @@ export default function PostList({ allPostsData, limit = 0 }) {
         <li className="my-5 pl-0 flex items-start" key={id}>
           <span className="text-2xl text-primary mr-2">→</span>
           <div>
-            <p className="text-2xl m-0 -indent-8 pl-8">
+            <p className="text-2xl m-0">
               <Link className="hover-glow no-underline font-light" href={`/posts/${id}`}>{title}</Link>
             </p>
             <DateDisplay dateString={date} />
