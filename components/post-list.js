@@ -3,6 +3,7 @@ import DateDisplay from '../components/date'
 
 export default function PostList({ allPostsData, limit = 0 }) {
   const posts = limit ? allPostsData.slice(0, limit) : allPostsData;
+  console.log('posts: ', posts.length);
   return (
     <ul className="list-none p-0 mb-12">
       {posts.map(({ id, date, title }) => (
@@ -15,7 +16,7 @@ export default function PostList({ allPostsData, limit = 0 }) {
             <DateDisplay dateString={date} />
           </div>
         </li>
-      )).slice(0, 4)}
+      ))}
     </ul>
   );
 }

@@ -16,6 +16,12 @@ export default function AllPosts({ allPostsData }) {
       <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
         <h1>Cold takes</h1>
         <PostList allPostsData={allPostsData} />
+
+        <h2>Elsewhere</h2>
+        <ul>
+          <li><a className="text-primary hover-glow" href="https://medium.com/@inorganik">Medium</a></li>
+          <li><a className="text-primary hover-glow" href="https://blog.briebug.com/blog/author/Jamie%20Perkins">Briebug blog</a></li>
+        </ul>
       </div>
       <LinkList title="links" links={socialLinks} />
       <MyApps />
@@ -26,6 +32,7 @@ export default function AllPosts({ allPostsData }) {
 // getStaticProps only runs server-side
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  console.log('posts: ', allPostsData);
   return {
     props: {
       allPostsData,
