@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="I'm Jamie Perkins, a senior software engineer specializing in frontend development."
+          content="I'm Jamie Perkins, a senior software engineer specializing in web development."
         />
         <meta name="robots" content="index, follow" />
         <meta
