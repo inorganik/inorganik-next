@@ -32,7 +32,6 @@ export default function AllPosts({ allPostsData }) {
 // getStaticProps only runs server-side
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  console.log('posts: ', allPostsData);
   return {
     props: {
       allPostsData,
