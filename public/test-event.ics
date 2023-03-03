@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+URL:https://inorganik.net
+DTSTART:20230501T140000
+DTEND:20230501T153000
+SUMMARY:Jamie's test event
+DESCRIPTION:This is a test event to determine if linking to a hosted .ics file works for opening the calendar on a user's phone
+LOCATION:1939 Catalina Dr Santa Cruz, CA 95062
+END:VEVENT
+END:VCALENDAR
