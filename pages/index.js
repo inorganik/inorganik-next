@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section className="max-w-none">
-        <h1 className="text-2xl sm:text-4xl">I&rsquo;m Jamie Perkins, a senior software engineer specializing in web development.</h1>
+        <h1 className="text-2xl sm:text-4xl">I&rsquo;m Jamie Perkins, a senior software engineer specializing in frontend web development.</h1>
       </section>
 
       <Leaderline className="my-6" />
