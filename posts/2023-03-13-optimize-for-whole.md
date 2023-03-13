@@ -1,6 +1,6 @@
 ---
 title: "Optimizing systems for the whole rather than the individual"
-date: '2023-03-23'
+date: '2023-03-13'
 ---
 
 Yesterday I sat in weekend I-70 traffic to go snowboarding with a friend. The traffic was predictably bad. Effectively parked, I grabbed my phone and had Google route me to get an ETA - parking lots at ski resorts close when they fill up, and if you don't make it in time, you may as well turn around. Google told me to take an exit, way before our planned exit. So I put on my blinker. 
