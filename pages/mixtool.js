@@ -3,9 +3,15 @@ import Head from 'next/head';
 
 
 export default function Mixtool() {
+  const siteTitle = 'Mixtool has moved';
   return <Layout>
     <Head>
-      <title>Mixtool has moved</title>
+      <title>{siteTitle}</title>
+      <meta
+        property="og:image"
+        content="https://inorganik.net/images/inorganik-produce-preview.png"
+      />
+      <meta name="og:title" content={siteTitle} />
     </Head>
 
     <section className="prose mt-12 max-w-none">

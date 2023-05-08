@@ -45,9 +45,16 @@ export async function getStaticProps({ params }) {
  */
 
 export default function Post({ postData, prevId, nextId }) {
+
+  const previewImg = `https://og-image.vercel.app/${encodeURI(
+    postData.title,
+  )}.png?theme=light&md=0&fontSize=75px&images=${encodeURIComponent('https://inorganik.net/images/circuitree-on-white.png')}`;
+
   return <Layout>
     <Head>
       <title>Post: {postData.title}</title>
+      <meta property="og:image" content={previewImg} />
+      <meta name="og:title" content={postData.title} />
     </Head>
 
     <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">

@@ -15,6 +15,11 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta
+          property="og:image"
+          content="https://inorganik.net/images/inorganik-produce-preview.png"
+        />
+        <meta name="og:title" content={siteTitle} />
       </Head>
 
       <section className="max-w-none">

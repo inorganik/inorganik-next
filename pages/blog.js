@@ -8,9 +8,15 @@ import PostList from '../components/post-list'
 
 
 export default function AllPosts({ allPostsData }) {
+  const siteTitle = 'Cold takes - inorganik blog';
   return <Layout>
     <Head>
-      <title>Cold takes - inorganik blog</title>
+      <title>{siteTitle}</title>
+      <meta
+        property="og:image"
+        content="https://inorganik.net/images/inorganik-produce-preview.png"
+      />
+      <meta name="og:title" content={siteTitle} />
     </Head>
     <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
