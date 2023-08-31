@@ -17,7 +17,7 @@ export default function Nomaste() {
 
         <div className="text-center">
           <p className="my-4 text-3xl">It&rsquo;s never been easier to figure out what&rsquo;s for dinner.</p>
-          <p className="my-4">The easiest way to plan meals with your partner. For Android, iOS and <a className="underline" href="https://nomaste.inorganik.net" target="_blank">online</a>.</p>
+          <p className="my-4">The easiest way to plan meals in a group. For Android, iOS and <a className="underline" href="https://nomaste.inorganik.net" target="_blank">online</a>.</p>
           <p className="my-4">Brought to you by <Link className="underline" href="/">Inorganik Produce</Link>.</p>
         </div>
       </div>
