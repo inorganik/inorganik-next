@@ -41,7 +41,7 @@ This code creates a store that updates every time the hash of the url changes, a
 
 MyComponent.svelte:
 ```html
-<script lang="ts">
+<script>
   import hash from '$lib/state/hash.js'
 
   $: dialogOpen = $hash === '#login'
@@ -49,29 +49,23 @@ MyComponent.svelte:
 
 ```
 
-Now `loginOpen` automatically updates to `true` if the hash matches "#login". From here you can pass this property to a dialog component that lives in a layout component, or use it directly.
+Now `dialogOpen` automatically updates to `true` if the hash matches "#login". From here, you can bind `dialogOpen` to the dialog's `open` attribute, or use it to call the dialog's `showModal()` method.
 
 ## The dialog element
 
 `<dialog>` is something I stumbled across, as I have been using UI component libraries for so long that I didn't realize how far html and browser support has come. With the native dialog, you get an accessible, versatile dialog with no extra packages.
 
-By just getting a reference to the dialog element, you have access to special methods, `dialog.showModal()` and `dialog.close()`. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) for more. So in our svelte component, we just need to get a reference to the dialog element:
+By just getting a reference to the dialog element, you have access to special methods, `dialog.showModal()` and `dialog.close()`. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) for more. I find it the simplest to just bind our `dialogOpen` property to the dialog's `open` attribute, like so:
 
 MyComponent.svelte:
 ```html
-<script lang="ts">
+<script>
   import hash from '$lib/state/hash.js'
 
-  let myDialog
-
-  $: if ($hash === '#login') {
-    myDialog?.showModal()
-  } else {
-    myDialog?.close()
-  }
+  $: dialogOpen = $hash === '#login'
 </script>
 
-<dialog bind:this={myDialog}>
+<dialog open={dialogOpen}>
   ...
 ```
 
@@ -89,14 +83,16 @@ We can listen for the dialog's close event to update the hash and react to any i
   }
 </script>
 
-<dialog bind:this={myDialog} on:close={handleClose}>
+<dialog open={dialogOpen} on:close={handleClose}>
+  ...
 ```
+
 It's worth mentioning, if you have a form inside your dialog, there are some special things you can do. For instance if you set the form's `method` attribute to "dialog", submitting it will close the dialog. In addition, if you place a button like this in your form, it will close the dialog:
 
 ```html
 <button value="foo" formmethod="dialog">Close</button>
 ```
-For either of these methods, `dialog.returnValue` will get set with the value of the button.
+For either of these methods, `dialog.returnValue` will get set with the value of the button, in this case "foo".
 
 ## Conclusion
 
