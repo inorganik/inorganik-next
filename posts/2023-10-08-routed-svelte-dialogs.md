@@ -1,5 +1,6 @@
 ---
 title: "A simple hash-routed dialog system with Svelte"
+description: "Route to dialogs in Svelte with a hash store and the native dialog element"
 date: '2023-10-08'
 ---
 
@@ -55,17 +56,23 @@ Now `dialogOpen` automatically updates to `true` if the hash matches "#login". F
 
 `<dialog>` is something I stumbled across, as I have been using UI component libraries for so long that I didn't realize how far html and browser support has come. With the native dialog, you get an accessible, versatile dialog with no extra packages.
 
-By just getting a reference to the dialog element, you have access to special methods, `dialog.showModal()` and `dialog.close()`. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) for more. I find it the simplest to just bind our `dialogOpen` property to the dialog's `open` attribute, like so:
+By just getting a reference to the dialog element, you have access to special methods, `dialog.showModal()` and `dialog.close()`. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) for more. Although it's very simple to just bind our `dialogOpen` property to the dialog's `open` attribute, I've found it's more accessible to use the `showModal()` method, because that way the close button is auto-focused and you can press escape to close the dialog.
 
 MyComponent.svelte:
 ```html
 <script>
   import hash from '$lib/state/hash.js'
 
-  $: dialogOpen = $hash === '#login'
+  let dialog
+
+  $: if ($hash === '#login') {
+    dialog?.showModal()
+  } else {
+    dialog?.close()
+  }
 </script>
 
-<dialog open={dialogOpen}>
+<dialog bind:this={dialog}>
   ...
 ```
 
@@ -83,7 +90,7 @@ We can listen for the dialog's close event to update the hash and react to any i
   }
 </script>
 
-<dialog open={dialogOpen} on:close={handleClose}>
+<dialog bind:this={dialog} on:close={handleClose}>
   ...
 ```
 

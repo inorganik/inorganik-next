@@ -47,10 +47,10 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData, prevId, nextId }) {
   return <Layout>
     <Head>
-      <title>Post: {postData.title}</title>
+      <title>{postData.title}</title>
       <meta
         name="description"
-        content={postData.title}
+        content={postData.description || 'I\'m Jamie Perkins. Software engineer, bootstrapper and dedicated dad.'}
       />
 
       <meta name="og:title" content={postData.title} />
