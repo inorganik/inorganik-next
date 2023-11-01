@@ -26,7 +26,7 @@ export default function Home({ allPostsData }) {
       <section className="prose sm:mt-8 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">
         <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-5">
 
-          <Subhead title="Latest cold takes" />
+          <Subhead title="Latest blogs" />
           <PostList allPostsData={allPostsData} limit={3} />
                     
           <Subhead title="Past projects" />

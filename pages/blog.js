@@ -14,7 +14,7 @@ export default function AllPosts({ allPostsData }) {
     </Head>
     <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div className="col-span-2 sm:col-span-3 row-auto sm:row-span-2">
-        <h1>Cold takes</h1>
+        <h1>Blog</h1>
         <PostList allPostsData={allPostsData} />
 
         <h2>Elsewhere</h2>
