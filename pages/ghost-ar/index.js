@@ -64,10 +64,10 @@ export default function GhostAr() {
           <div className="max-h-screen">
             <div className="w-full h-[600px] sm:w-[400px] sm:h-auto mx-auto relative" ref={carousel}>
 							<div>
-								<img alt="Encounter 4 unique live-action ghosts" src="/images/ghost-ar/app-store-1-5.5.jpg" />
+                <Image src="/images/ghost-ar/app-store-1-5.5.jpg" width={621} height={1104} priority alt="Encounter 4 unique live-action ghosts" />
 							</div>
 							<div>
-								<img alt="Capture realistic ghost photos" src="/images/ghost-ar/app-store-2-5.5.jpg" />
+                <Image src="/images/ghost-ar/app-store-2-5.5.jpg" width={621} height={1104} priority alt="Capture realistic ghost photos" />
 							</div>
 						</div>
           </div>
