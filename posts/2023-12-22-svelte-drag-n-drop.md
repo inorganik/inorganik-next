@@ -1,10 +1,10 @@
 ---
-title: "How to build a drag-n-drop list in Svelte"
+title: "How to build a drag and drop list in Svelte"
 description: "Re-order list items with a drag and drop interface in Svelte"
 date: '2023-12-22'
 ---
 
-For re-ordering things in a list, nothing beats a drag-n-drop interface. In this tutorial, we'll build a drag-n-drop list in Svelte. You might find that it's simpler than you expected; there are no third party packages required, only native browser APIs. The only thing specific to Svelte will be how we respond to drag and drop events.
+For re-ordering things in a list, nothing beats a drag and drop interface. In this tutorial, we'll build a drag and drop list in Svelte. You might find that it's simpler than you expected; there are no third party packages required, only native browser APIs. The only thing specific to Svelte will be how we respond to drag and drop events.
 
 In my game, [Cities 4 Sale](https://cities4sale.io) you build products with blocks, which you have to farm. In the game interface for farming blocks, you choose from a variety of colors, which I wanted in rainbow order. So I needed a drag-and-drop interface on my admin page to sort the blocks. Here it is, with blocks sorted by hex color (doesn't work):
 
@@ -95,11 +95,11 @@ function handleDrop() {
 
 Now we can re-order our list! Much better.
 
-[![Colors in rainbow order](/images/posts/drag-n-drop/admin-page-out-of-order.png)](https://inorganik.net/images/posts/drag-n-drop/admin-page-out-of-order.png)
+[![Colors in rainbow order](/images/posts/drag-n-drop/admin-block-page.png)](https://inorganik.net/images/posts/drag-n-drop/admin-block-page.png)
 
 ## Wrapping up
 
-This tutorial was a total drag! But I hope you enjoyed it. Here are a couple tips to keep in mind when implementing drag-n-drop:
+This tutorial was a total drag! But I hope you enjoyed it. Here are a couple tips to keep in mind when implementing drag and drop:
 
 1. This code doesn't work on touch interfaces. It may be possible by responding to touch events, but I haven't tried.
 2. The ghost image by default is square - if your items have rounded corners, you can make list items have a relative position and give them a z-index, and the ghost image will be transparent!
