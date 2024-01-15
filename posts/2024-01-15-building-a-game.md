@@ -1,6 +1,6 @@
 ---
 title: "I'm building a supply chain logistics game"
-description: "Cities 4 Sale is a massively multiplayer online idle game I'm working on"
+description: "Cities 4 Sale is a massively multiplayer online idle game coming soon"
 date: '2024-01-15'
 ---
 
@@ -12,7 +12,7 @@ Players can purchase cities to farm blocks or build products. The in-game cities
 
 In cities, you farm blocks or build products, depending on the size of the population. The products require a specific “recipe” of blocks to build. 
 
-“The products?” you ask? These are one-of-a-kind voxel-style 3D models that come in a series, and there is a new one each week. When purchased, they earn you gems, which can in turn be used to purchase upgrades for your cities. Here’s the first product series!
+“The products?” you ask? These are one-of-a-kind voxel-style 3D models that come in a series, and there is a new one each week. When purchased, they earn you gems, which in turn can be used to purchase upgrades for your cities. Here’s the first product series!
 
 [![Cities 4 Sale - Video game series](/images/posts/building-a-game/first-product-series.png)](https://inorganik.net/images/posts/building-a-game/first-product-series.png)
 
