@@ -6,6 +6,7 @@ import DateDisplay from '../../components/date'
 import LinkList from '../../components/link-list'
 import MyApps from '../../components/my-apps'
 import { socialLinks } from '../../lib/static-content'
+import { useEffect } from 'react'
 
 /**
  * When you export a function called getStaticPaths (Static Site Generation)
@@ -45,6 +46,15 @@ export async function getStaticProps({ params }) {
  */
 
 export default function Post({ postData, prevId, nextId }) {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.querySelectorAll('code').forEach((block) => {
+        block.className = 'language-js';
+      });
+    }
+  }, []);
+
   return <Layout>
     <Head>
       <title>{postData.title}</title>

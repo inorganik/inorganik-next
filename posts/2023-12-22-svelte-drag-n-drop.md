@@ -12,7 +12,7 @@ In my game, [Cities 4 Sale](https://cities4sale.io) you build products with bloc
 
 Here is the markup for the list. I'm using Tailwind for the styles:
 
-```js
+```html
 <ul class="columns-3">
   {#each items as item, index (item.id)}
     <li class="flex items-center justify-start mb-4 px-4 rounded-full bg-white"
@@ -30,7 +30,7 @@ Here is the markup for the list. I'm using Tailwind for the styles:
 
 Let's add drag-n-drop! We'll add event handlers on the list container and list items. For the list container, we'll handle the `drop` and `dragover` events. The `preventDefault` event modifier on the `dragover` event will allow other events to fire on list items.
 
-```js
+```html
 <ul
   on:drop={handleDrop}
   on:dragover|preventDefault={handleDragOver}
@@ -39,7 +39,7 @@ Let's add drag-n-drop! We'll add event handlers on the list container and list i
 
 For the list items, the key attribute is `draggable`. This makes the browser create a ghosted image of the item being dragged that follows the cursor, and fires all the drag events. The other event handlers allow us to capture indexes (defined in the #each logic block) of where the dragged item started and where it will end.
 
-```js
+```html
 <li
   draggable="true"
   on:dragstart={() => handleDragStart(index)}
