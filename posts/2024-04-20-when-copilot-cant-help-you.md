@@ -4,7 +4,7 @@ description: "Once in a while you get an especially tricky coding problem to sol
 date: '2024-04-20'
 ---
 
-Have you every been coding and run into something so difficult that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game Cities 4 Sale, I came across one such problem.
+Have you every been coding and run into something so difficult that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across one such problem.
 
 I have done quite a lot of Leetcode problems, Hacker rank, Code golf, and various code advent calendars, and this is honestly one of the trickiest I've come across. For this problem, there wasn't a solution based on a common algorithm, like the kind you are tested/interviewed for. Despite that, my solution fit in 35 lines of code.
 
