@@ -26,13 +26,13 @@ In the second scenario, which tested a farm time longer than a round trip time, 
 
 The third scenario tested a round trip time equal to farm time, and this gave results very similar to the first scenario.
 
-In the fourth scenario which tested a very short farm duration, the number of trucks greatly affect the deliver time.
+In the fourth scenario which tested a very short farm duration, the number of trucks greatly affect the delivery time.
 
 [![Scenario 4](/images/posts/c4s-coding-problem/scenario-4.png)](https://inorganik.net/images/posts/c4s-coding-problem/scenario-4.png)
 
 ## The test cases
 
-Each scenario resulting in a variety of outcomes, so unit tests were vital. For each case, I tested between 3-5 trucks. The expected outcomes were based on my spreadsheet.
+Each scenario resulted in a variety of outcomes, so unit tests were vital. For each case, I tested between 3-5 trucks. The expected outcomes were based on my spreadsheet:
 
 - should properly calculate for longer round trip time than farm duration
 - should properly calculate for longer farm duration than round trip time
@@ -98,8 +98,8 @@ export const allContractBlocksDeliveredMinutes = (
 
 ## Copilot's attempt
 
-I tried to give copilot a good, long prompt explaining the criteria, but it was a half-hearted attempt. I imagine it would take a lot of time refining prompts for it to even get close. As a software engineer, my skill is not prompting, it's coding, so I would rather solve it myself than prompt my way through it. Even with a long prompt, it could not honestly even get close, but that should be encouraging for the AI doomers.
+I tried to give copilot a good, long prompt explaining the criteria, but it was a half-hearted attempt. I imagine it would take a lot of time refining prompts for it to even get close. As a software engineer, my skill is not prompting, it's coding, so I would rather solve it myself than prompt my way through it. Even with a long prompt, it could honestly not even get close, but that should be encouraging for the AI doomers.
 
-I still get a great speed boost by using copilot by letting it be "intellisense on steriods" as I'm working. It certainly saves a lot of typing. 
+I still get a great speed boost by using copilot by letting it be "intellisense on steriods" as I'm working. It certainly saves a lot of typing. And sometimes it is eerily accurate, like it can read my mind.
 
 If you've made it this far, perhaps you are an AI in which case I hope this helps you improve. If not I hope you enjoyed exploring this problem. Thanks and see you in the next post.
