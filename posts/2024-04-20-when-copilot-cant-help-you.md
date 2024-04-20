@@ -1,14 +1,14 @@
 ---
-title: "When copilot can't help you: one of the toughest coding problems I've ever faced"
+title: "When copilot can't help you: solving a tricky code problem"
 description: "Once in a while you get an especially tricky coding problem to solve, and this is how I solved it."
 date: '2024-04-20'
 ---
 
-Have you every been coding and run into something so difficult that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across one such problem.
+Have you every been coding and run into something challenging enough that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across one such problem.
 
 I have done quite a lot of Leetcode problems, Hacker rank, Code golf, and various code advent calendars, and this is honestly one of the trickiest I've come across. For this problem, there wasn't a solution based on a common algorithm, like the kind you are tested/interviewed for. Despite that, my solution fit in 35 lines of code.
 
-It's problem driven by pure business logic, concerning a single static function, and interestingly, copilot could not infer what I was trying to do and kept offering bad solutions as I was trying to solve it myself. That's understandable, since it didn't have the full context. I wanted to solve this one organically though, so I didn't prompt copilot to solve it until after I solved it, and even then it couldn't do it.
+It's a problem driven by pure business logic, concerning a single static function, and interestingly, copilot could not infer what I was trying to do and kept offering bad solutions as I was trying to solve it myself. That's understandable, since it didn't have the full context. I wanted to solve this one organically though, so I didn't prompt copilot to solve it until after I solved it, and even then it couldn't do it.
 
 ## The problem
 
