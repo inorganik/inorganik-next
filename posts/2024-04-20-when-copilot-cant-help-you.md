@@ -1,18 +1,18 @@
 ---
-title: "When copilot can't help you: solving a tricky code problem"
-description: "Once in a while you get an especially tricky coding problem to solve, and this is how I solved it."
+title: "When copilot can't help you: a logistics coding challenge"
+description: "Once in a while you get an especially tricky coding problem to solve, and this the story of one such problem."
 date: '2024-04-20'
 ---
 
-Have you every been coding and run into something challenging enough that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across at least one such problem.
+Have you every been coding and run into something challenging enough that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across at one such problem.
 
-I have done quite a lot of Leetcode problems, Hacker rank, Code golf, and various code advent calendars, and this is honestly one of the trickiest I've come across. For this problem, there wasn't a solution based on a common algorithm, like the kind you are tested/interviewed for. Despite that, my solution fit in 35 lines of code.
+I have done quite a lot of Leetcode problems, Hacker rank, Code golf, and various code advent calendars, and this is honestly one of the trickiest coding problems I've come across. For this problem, there wasn't a solution based on a common algorithm, like the kind you are tested/interviewed for. Despite that, my solution fit in 35 lines of code.
 
-It's a problem driven by pure business logic, concerning a single static function, and interestingly, copilot could not infer what I was trying to do and kept offering bad solutions as I was trying to solve it myself. That's understandable, since it didn't have the full context. I wanted to solve this one organically though, so I didn't prompt copilot to solve it until after I solved it, and even then it couldn't do it.
+It's a logistics problem guided by pure business logic, concerning a single static function, and interestingly, copilot could not infer what I was trying to do and kept offering bad solutions as I was trying to solve it myself. That's understandable, since it didn't have the full context. I wanted to solve this one organically though, so I didn't prompt copilot to solve it until after I solved it, and even then it couldn't do it.
 
 ## The problem
 
-In Cities 4 Sale, you farm blocks to build products. Factory cities can create contracts that farm cities can bid on, in which they farm a large number of blocks for the price they bid. This could be say 50,000 medium gray blocks. Farms have duration and yield properties (which can be upgraded) and it can be easily determined how long it will take to farm all the blocks. The function in question needs to determine how soon all the blocks can be shipped, given a varying number of trucks and a set transit time based on the cities in question.
+In Cities 4 Sale, you farm blocks to build products. Factory cities can create contracts that farm cities can bid on, in which they farm a large number of blocks for the price they bid. This could be say 50,000 medium gray blocks. Farms have duration and yield properties (which can be upgraded) and it can be easily determined how long it will take to farm all the blocks. The function in question needs to determine how soon all the blocks can be shipped, given a transit time, farm properties, and a varying number of trucks.
 
 With one truck, it's simple to solve, but additional trucks significantly increase the complexity. I created a spreadsheet to visualize the outcomes. 
 
@@ -32,7 +32,7 @@ In the fourth scenario which tested a very short farm duration, the number of tr
 
 ## The test cases
 
-Each scenario resulted in a variety of outcomes, so unit tests were vital. For each case, I tested between 3-5 trucks. The expected outcomes were based on my spreadsheet:
+Each scenario resulted in a variety of outcomes, so unit tests were vital. For each case, I tested between 1-5 trucks. The expected outcomes were based on my spreadsheet:
 
 - should properly calculate for longer round trip time than farm duration
 - should properly calculate for longer farm duration than round trip time
@@ -43,7 +43,7 @@ I am using vitest in this project and it works great, very similar to jest; fast
 
 ## The solution
 
-I came up with a solution as I often do, through brute-force trial and error, and plenty of console logs. The key was noticing a pattern in my spreadsheet - the number of round trips required always equaled the number of cycles minus the number of trucks. It was then a matter of setting the start time properly for each truck because trucks sometimes have to wait for a crop to finish.
+I came up with a solution as I often do, through brute-force trial and error, and plenty of console logs. The key was noticing a pattern in my spreadsheet - the number of round trips required always equaled the number of cycles minus the number of trucks. Then it was just a matter of setting the start time properly for each truck because trucks sometimes have to wait for a crop to finish.
 
 ```ts
 export const allContractBlocksDeliveredMinutes = (
