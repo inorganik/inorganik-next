@@ -4,7 +4,7 @@ description: "Once in a while you get an especially tricky coding problem to sol
 date: '2024-04-20'
 ---
 
-Have you every been coding and run into something challenging enough that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across one such problem.
+Have you every been coding and run into something challenging enough that you actually had to stop your music so you could think harder? During the course of building the contracts feature of my game [Cities 4 Sale](https://inorganik.net/posts/2024-01-15-building-a-game), I came across at least one such problem.
 
 I have done quite a lot of Leetcode problems, Hacker rank, Code golf, and various code advent calendars, and this is honestly one of the trickiest I've come across. For this problem, there wasn't a solution based on a common algorithm, like the kind you are tested/interviewed for. Despite that, my solution fit in 35 lines of code.
 
@@ -43,7 +43,7 @@ I am using vitest in this project and it works great, very similar to jest; fast
 
 ## The solution
 
-I came up with a solution as I often do, through brute-force trial and error, and plenty of console logs. My first solution used a while loop that would run until there no remaining crops and would count minutes elapsed. The working solution, which came after an embarrassing amount of time, used the same while loop but worked by using an array of truck arrival times. Here it is:
+I came up with a solution as I often do, through brute-force trial and error, and plenty of console logs. The key was noticing a pattern in my spreadsheet - the number of round trips required always equaled the number of cycles minus the number of trucks. It was then a matter of setting the start time properly for each truck because trucks sometimes have to wait for a crop to finish.
 
 ```ts
 export const allContractBlocksDeliveredMinutes = (
