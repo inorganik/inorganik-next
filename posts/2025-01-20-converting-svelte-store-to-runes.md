@@ -36,8 +36,9 @@ function createBlockStore() {
 export const blockStore = createBlockStore()
 ```
 
-For runes, we simply write a class which can hold any amount of properties defined by runes - plus methods to update them, so they are consolidated to one place. You could keep the function format, but it requires you to write getters and setters which are less concise than using a class.
+For runes, we simply write a class which can hold any amount of properties defined by runes - plus methods to update them, so they are consolidated to one place. You could keep the function format, but it requires you to write getters and setters which are less concise than using a class. Make sure the file name ends with "svelte.ts" or "svelte.js" to enable runes.
 
+lib/state/store.svelte.ts
 ```ts
 class BlockStore {
   blocks = $state<Blocks[]>([]);
