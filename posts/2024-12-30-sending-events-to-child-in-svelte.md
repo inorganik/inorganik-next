@@ -48,7 +48,7 @@ Here's an <a href="https://svelte.dev/playground/2982766e82b74f0a8f2e115db0af9aa
 
 ## Why?
 
-Admittedly the use cases for this are rare, but there are legitimate ones. For getting values from a child component the simplest thing to do would be to use a `$bindable()` prop. But sometimes you need the child component to react to an event.
+As I mentioned, the use cases for this are rare, but there are legitimate ones. For getting values from a child component the simplest thing to do would be to use a `$bindable()` prop. But sometimes you need the child component to react to an event.
 
 In my case I am using <a href="https://threlte.xyz/">Threlte</a>, the Svelte wrapper around Three.js. The way you compose components in Threlte is to have a container which holds the `<Canvas />` element, and inside that you nest a scene component. I have a button in my canvas component to export an image of the canvas, but to get the image, you need to use the renderer, which is only accessible through a `useThrelte` hook in the scene. I couldn't put the button in the scene, so when clicking the button, I needed the child scene component to export the image via the renderer, how it looked at that exact moment.
 
