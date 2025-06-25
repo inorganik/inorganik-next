@@ -18,7 +18,7 @@ Here is the markup for the list. I'm using Tailwind for the styles:
     <li class="flex items-center justify-start mb-4 px-4 rounded-full bg-white"
     >
       <SmallBlock color={item.color_hex} />
-      <button on:click={() => editBlock(item)} class="btn btn-link"
+      <button onclick={() => editBlock(item)} class="btn btn-link"
         >{item.name}</button
       >
     </li>
@@ -32,26 +32,30 @@ Let's add drag-n-drop! We'll add event handlers on the list container and list i
 
 ```html
 <ul
-  on:drop={handleDrop}
-  on:dragover|preventDefault={handleDragOver}
+  ondrop={handleDrop}
+  ondragover={handleDragOver}
 >
 ```
 
 For the list items, the key attribute is `draggable`. This makes the browser create a ghosted image of the item being dragged that follows the cursor, and fires all the drag events. The other event handlers allow us to capture indexes (defined in the #each logic block) of where the dragged item started and where it will end.
 
+For the item class, I've set the cursor to grab, and included a ternary to reduce the opacity if the item is being dragged.
+
 ```html
 <li
+  class={`cursor-grab ${dragStartIndex === index ? 'opacity-30' : ''}`}
   draggable="true"
-  on:dragstart={() => handleDragStart(index)}
-  on:dragenter={() => handleDragEnter(index)}
+  ondragstart={() => handleDragStart(index)}
+  ondragenter={() => handleDragEnter(index)}
+  ondragend={handleDragEnd}
 >
 ```
 
 Let's define some properties and a dragstart handler, then we define some event handlers for the list item events, which just capture indexes.
 ```js
-let dragStartIndex
-let dragEnterIndex
-let dropIndex
+let dragStartIndex = $state(-1)
+let dragEnterIndex = $state(-1)
+let dropIndex = $state(-1)
 
 function handleDragStart(index) {
     dragStartIndex = index
@@ -60,11 +64,16 @@ function handleDragStart(index) {
 function handleDragEnter(index) {
     dragEnterIndex = index
 }
+
+function handleDragEnd() {
+    dragStartIndex = -1
+}
 ```
 
 The dragover event fires every frame while the item being dragged is over the unordered-list element. It constantly re-calculates the drop index based on if the pointer is over the top half or bottom half of the target, using the data in the event. If it is the top half, the user is trying to drop the item into the same place as the target, otherwise, they want it after that item:
 ```js
 function handleDragOver(e) {
+  e.preventDefault()
   const targetTop = e.target.getBoundingClientRect().top
   const targetHeight = e.target.getBoundingClientRect().height
   const yLoc = e.clientY - targetTop
@@ -86,10 +95,9 @@ The rest of the function is just re-ordering the list and reassigning the array 
 function handleDrop() {
   if (dragStartIndex === dropIndex) return
   const draggedItem = items[dragStartIndex]
-  const newItems = [...items]
-  newItems.splice(dragStartIndex, 1)
-  newItems.splice(dropIndex, 0, draggedItem)
-  items = newItems
+  items.splice(dragStartIndex, 1)
+  items.splice(dropIndex, 0, draggedItem)
+  // send update to backend here
 }
 ```
 
