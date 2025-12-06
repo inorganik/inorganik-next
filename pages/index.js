@@ -1,13 +1,14 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import { getSortedPostsData } from '../lib/posts'
-import { socialLinks, projects, githubLinks } from '../lib/static-content'
+import Layout from '../components/layout'
 import Leaderline from '../components/leaderline'
 import LinkList from '../components/link-list'
 import MyApps from '../components/my-apps'
+import PostList from '../components/post-list'
 import ProjectCard from '../components/project-card'
 import Subhead from '../components/subhead'
-import PostList from '../components/post-list'
+import { getSortedPostsData } from '../lib/posts'
+import { githubLinks, projects, socialLinks } from '../lib/static-content'
+import { siteTitle } from './_document'
 
 export default function Home({ allPostsData }) {
   
