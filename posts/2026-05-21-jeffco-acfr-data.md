@@ -4,7 +4,7 @@ description: "I compiled 20 years of data from JeffCo's Annual Comprehensive Fin
 date: '2026-05-21'
 ---
 
-[![20 years of JeffCo ACFR data](/images/posts/jefco-acfr.png)](https://inorganik.net/jeffco-acfr-report)
+[![20 years of JeffCo ACFR data](/images/posts/jeffco-acfr.png)](https://inorganik.net/jeffco-acfr-report)
 
 As a dad of 2 JeffCo students (Mt. Carbon elementary and Summit Ridge middle) I have become increasingly curious about our district's budgeting. Our beloved Peiffer Elementary closed in 2023. We occasionally get urgent requests from our daughter's current school to buy supplies they are lacking, and they run 3-5 fundraisers per year. And we continue to see teachers get cut. So I started to take a close look at the data when I heard about yet another budget shortfall.
 
