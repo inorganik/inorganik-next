@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DataStudioReport from '../../components/data-studio-report';
 import DateDisplay from '../../components/date';
+import Footer from '../../components/footer';
 import Leaderline from '../../components/leaderline';
 
 const REPORT_URL =
@@ -73,13 +74,13 @@ export default function JeffcoAcfrReport() {
             </li>
           </ul>
           <p>
-            My data for this report is compiled in a{' '}
+            My data for this report is compiled in{' '}
             <a
               href="https://docs.google.com/spreadsheets/d/1UKSAyTid9bnt_9dLHvFNYv0C9XsniD2D4yG7-DGq-ME/edit?usp=sharing"
               target="_blank"
             >
               {' '}
-              google sheet
+              this google sheet
             </a>
             . For up-to-date reporting on the district, I encourage you to check out{' '}
             <a href="https://cotlns-newsletter-education.beehiiv.com/" target="_blank">
@@ -90,6 +91,7 @@ export default function JeffcoAcfrReport() {
           <DataStudioReport reportUrl={REPORT_URL} />
         </article>
       </section>
+      <Footer />
     </div>
   );
 }

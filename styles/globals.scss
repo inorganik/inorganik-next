@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+// @layer components {
+//   :root .prose {
+//     --tw-prose-body: hsl(var(--bc));
+//   }
+// }
+
 @layer base {
   // :root {
   //   --color-primary: 77 99 188;

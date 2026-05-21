@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Circuitree from './circuitree';
+import Footer from './footer';
 import Leaderline from './leaderline';
 
 export default function Layout({ children, home }) {
@@ -32,9 +33,7 @@ export default function Layout({ children, home }) {
 
       <main className="flex flex-col flex-grow">{children}</main>
 
-      <footer className="footer items-center opacity-60 py-6 mt-12 text-secondary">
-        <p>{new Date().getFullYear()} &copy; inorganik produce, inc.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

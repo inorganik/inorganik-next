@@ -85,7 +85,6 @@ module.exports = {
             h3: {
               fontWeight: '300',
             },
-            // p: { color: 'hsl(var(--bc))' },
           },
         },
       },
