@@ -47,18 +47,45 @@ export default function JeffcoAcfrReport() {
             >
               $68 million budget shortfall
             </a>{' '}
-            and as a father of 2 JeffCo students, I wanted to understand the budget better. So I
+            and as a dad of 2 JeffCo students, I wanted to understand the budget better. So I
             compiled 20 years of data from JeffCo's Annual Comprehensive Financial Reports. Here are
             the headlines:
           </p>
-          <ul></ul>
+          <ul className="text-xl">
+            <li>
+              Enrollment has declined by about 10K students in the last 20 years in JeffCo overall.
+            </li>
+            <li>
+              Charter school enrollment has more than doubled over the last 20 years, and is still
+              growing.
+            </li>
+            <li>
+              In just the last 5 years, teacher count has dropped by 344, but admin personnel has
+              gone up by 49.
+            </li>
+            <li>
+              Over the last 10 years, special education spending has increased from 16% to 21% of
+              the instruction budget.
+            </li>
+            <li>
+              Over the last 10 years, the General Administration expense category has more than
+              doubled from $25.5 million to $61 million.
+            </li>
+          </ul>
           <p>
+            My data for this report is compiled in a{' '}
             <a
               href="https://docs.google.com/spreadsheets/d/1UKSAyTid9bnt_9dLHvFNYv0C9XsniD2D4yG7-DGq-ME/edit?usp=sharing"
               target="_blank"
             >
-              You can find the google sheet driving this data here.
+              {' '}
+              google sheet
             </a>
+            . For up-to-date reporting on the district, I encourage you to check out{' '}
+            <a href="https://cotlns-newsletter-education.beehiiv.com/" target="_blank">
+              Suzie Glassman's reporting
+            </a>
+            .
           </p>
           <DataStudioReport reportUrl={REPORT_URL} />
         </article>
