@@ -43,7 +43,7 @@ module.exports = {
       },
     ],
     darkTheme: 'inorganikDark',
-    logs: false
+    logs: false,
   },
   theme: {
     extend: {
@@ -59,12 +59,18 @@ module.exports = {
         sans: ['Work Sans', 'sans-serif'],
       },
       fontSize: {
-        '4xl': ['2.25rem', {
-          lineHeight: '3rem',
-        }],
-        '6xl': ['3.75rem', {
-          lineHeight: '5rem',
-        }],
+        '4xl': [
+          '2.25rem',
+          {
+            lineHeight: '3rem',
+          },
+        ],
+        '6xl': [
+          '3.75rem',
+          {
+            lineHeight: '5rem',
+          },
+        ],
       },
       typography: {
         DEFAULT: {
@@ -82,11 +88,8 @@ module.exports = {
             // p: { color: 'hsl(var(--bc))' },
           },
         },
-      }
-    }
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('daisyui'),
-  ],
-}
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+};

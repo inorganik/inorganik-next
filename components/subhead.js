@@ -5,5 +5,5 @@ export default function Subhead({ title }) {
       <span className="w-2"></span>
       <span className="h-[17px] flex-grow border-b border-neutral border-dotted"></span>
     </div>
-  )
+  );
 }

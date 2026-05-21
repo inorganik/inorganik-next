@@ -1,11 +1,11 @@
 ---
-title: "If only we could have alt-weekends"
+title: 'If only we could have alt-weekends'
 date: '2023-01-16'
 ---
 
-This last weekend we went to the [National Western Stock Show](https://nationalwestern.com/) and the event was packed! I've been going since I was a kid but I have never seen it so packed. Just arriving at the stock show complex we sat in a long line of cars on the I-70 exit ramp for half an hour. Once inside, the line was too long for my daughter to get a pony ride... the line was too long for face paint and it was too long for the kids' petting zoo. Sure, we could've queued up for an hour, but we had rodeo tickets and didn't have time. Every other year we've gone we've never had to wait in long lines. 
+This last weekend we went to the [National Western Stock Show](https://nationalwestern.com/) and the event was packed! I've been going since I was a kid but I have never seen it so packed. Just arriving at the stock show complex we sat in a long line of cars on the I-70 exit ramp for half an hour. Once inside, the line was too long for my daughter to get a pony ride... the line was too long for face paint and it was too long for the kids' petting zoo. Sure, we could've queued up for an hour, but we had rodeo tickets and didn't have time. Every other year we've gone we've never had to wait in long lines.
 
-I'm sure this is familiar for lots of events across the country and not just in Colorado. Perhaps the population has reached a critical mass; I don't really know what the reason is, but it has made these kind of events much less fun. 
+I'm sure this is familiar for lots of events across the country and not just in Colorado. Perhaps the population has reached a critical mass; I don't really know what the reason is, but it has made these kind of events much less fun.
 
 One idea to mitigate crowds is alternative weekends. If half the population took their weekends during the week, say Monday/Tuesday, it could spread out attendance to various recreational destinations over more days, potentially reducing it by half.
 

@@ -1,5 +1,5 @@
 ---
-title: "What is the social cost of WFH?"
+title: 'What is the social cost of WFH?'
 date: '2023-02-13'
 ---
 

@@ -34,9 +34,9 @@ export default function ReportEmbed({ reportUrl }: ReportEmbedProps) {
           position: relative;
           width: 100%;
           max-width: 1200px;
-          
-          height: 2084px; 
-          
+
+          height: 2084px;
+
           overflow: hidden;
           background-color: #121212; /* Clean dark mode loading canvas */
           scrollbar-color: #646464 #1c1c1c;

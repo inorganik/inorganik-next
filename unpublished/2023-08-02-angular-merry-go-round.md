@@ -22,4 +22,3 @@ Hope you've been keeping your large enterprise apps up-to-date because there's a
 Nice. But I think we forgot something. Oh yea PERFORMANCE! Something other frameworks excel at, Angular, not so much. This whole time, we were chasing shiny objects and basically masturbating with code, when we forgot the most important thing, the user! This whole time, we were making a website with forms. ALL THAT for a website with forms.
 
 🤯
-

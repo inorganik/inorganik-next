@@ -1,6 +1,6 @@
 ---
-title: "Sending events to a child component in Svelte 5"
-description: "Here is an extremely simple way to dispatch events to child components in Svelte 5."
+title: 'Sending events to a child component in Svelte 5'
+description: 'Here is an extremely simple way to dispatch events to child components in Svelte 5.'
 date: '2024-12-30'
 ---
 
@@ -8,42 +8,47 @@ In Svelte 5, it's easy to dispatch events to parent components with a callback p
 
 ## The code
 
-My solution was to make a super simple emitter class. An emitter instance is passed to the child as a prop where it can assign a prop function to the `event` property of the emitter. 
+My solution was to make a super simple emitter class. An emitter instance is passed to the child as a prop where it can assign a prop function to the `event` property of the emitter.
 
 ParentComponent.svelte:
+
 ```html
 <script>
-// ...omitting some code here
+  // ...omitting some code here
 
-class Emitter {
-  setEvent(fn) {
-    this.event = fn;
+  class Emitter {
+    setEvent(fn) {
+      this.event = fn;
+    }
   }
-}
-const emitter = new Emitter();
+  const emitter = new Emitter();
 </script>
 
-<ChildComponent getValue={(val) => handleResult(val)} {emitter} />
-<button type="button" onclick={() => emitter.event()}>Click me</button>
+<ChildComponent getValue="{(val)" ="">
+  handleResult(val)} {emitter} />
+  <button type="button" onclick="{()" ="">emitter.event()}>Click me</button></ChildComponent
+>
 ```
 
 Whenever the parent calls `emitter.event()` the child component can do whatever it needs to in the event function, which gets assigned in an effect. It can call a callback prop function to send a value back up to the parent component:
 
 ChildComponent.svelte:
+
 ```html
 <script>
-	// ...omitting some code here
+  // ...omitting some code here
 
-	let { emitter, getValue } = $props();
+  let { emitter, getValue } = $props();
 
-	$effect(() => {
-		emitter.setEvent(() => {
+  $effect(() => {
+    emitter.setEvent(() => {
       // do something here react to the event and/or get a value
-      getValue(value)
+      getValue(value);
     });
-	});
+  });
 </script>
 ```
+
 Here's an <a href="https://svelte.dev/playground/2982766e82b74f0a8f2e115db0af9aab?version=5.16.0">example of this</a> in the svelte playground.
 
 ## Why?

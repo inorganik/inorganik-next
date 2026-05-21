@@ -1,6 +1,6 @@
 ---
-title: "How to build a drag and drop list in Svelte"
-description: "Re-order list items with a drag and drop interface in Svelte"
+title: 'How to build a drag and drop list in Svelte'
+description: 'Re-order list items with a drag and drop interface in Svelte'
 date: '2023-12-22'
 ---
 
@@ -15,13 +15,10 @@ Here is the markup for the list. I'm using Tailwind for the styles:
 ```html
 <ul class="columns-3">
   {#each items as item, index (item.id)}
-    <li class="flex items-center justify-start mb-4 px-4 rounded-full bg-white"
-    >
-      <SmallBlock color={item.color_hex} />
-      <button onclick={() => editBlock(item)} class="btn btn-link"
-        >{item.name}</button
-      >
-    </li>
+  <li class="flex items-center justify-start mb-4 px-4 rounded-full bg-white">
+    <SmallBlock color="{item.color_hex}" />
+    <button onclick="{()" ="">editBlock(item)} class="btn btn-link" >{item.name}</button>
+  </li>
   {/each}
 </ul>
 ```
@@ -31,10 +28,7 @@ Here is the markup for the list. I'm using Tailwind for the styles:
 Let's add drag-n-drop! We'll add event handlers on the list container and list items. For the list container, we'll handle the `drop` and `dragover` events. The `preventDefault` event modifier on the `dragover` event will allow other events to fire on list items.
 
 ```html
-<ul
-  ondrop={handleDrop}
-  ondragover={handleDragOver}
->
+<ul ondrop="{handleDrop}" ondragover="{handleDragOver}"></ul>
 ```
 
 For the list items, the key attribute is `draggable`. This makes the browser create a ghosted image of the item being dragged that follows the cursor, and fires all the drag events. The other event handlers allow us to capture indexes (defined in the #each logic block) of where the dragged item started and where it will end.
@@ -52,51 +46,55 @@ For the item class, I've set the cursor to grab, and included a ternary to reduc
 ```
 
 Let's define some properties and a dragstart handler, then we define some event handlers for the list item events, which just capture indexes.
+
 ```js
-let dragStartIndex = $state(-1)
-let dragEnterIndex = $state(-1)
-let dropIndex = $state(-1)
+let dragStartIndex = $state(-1);
+let dragEnterIndex = $state(-1);
+let dropIndex = $state(-1);
 
 function handleDragStart(index) {
-    dragStartIndex = index
+  dragStartIndex = index;
 }
 
 function handleDragEnter(index) {
-    dragEnterIndex = index
+  dragEnterIndex = index;
 }
 
 function handleDragEnd() {
-    dragStartIndex = -1
+  dragStartIndex = -1;
 }
 ```
 
 The dragover event fires every frame while the item being dragged is over the unordered-list element. It constantly re-calculates the drop index based on if the pointer is over the top half or bottom half of the target, using the data in the event. If it is the top half, the user is trying to drop the item into the same place as the target, otherwise, they want it after that item:
+
 ```js
 function handleDragOver(e) {
-  e.preventDefault()
-  const targetTop = e.target.getBoundingClientRect().top
-  const targetHeight = e.target.getBoundingClientRect().height
-  const yLoc = e.clientY - targetTop
+  e.preventDefault();
+  const targetTop = e.target.getBoundingClientRect().top;
+  const targetHeight = e.target.getBoundingClientRect().height;
+  const yLoc = e.clientY - targetTop;
   if (yLoc < targetHeight / 2) {
     // top half - replace item at index
-    dropIndex = dragEnterIndex
+    dropIndex = dragEnterIndex;
   } else {
     // bottom half - place after item
-    dropIndex = dragEnterIndex + 1
+    dropIndex = dragEnterIndex + 1;
   }
 }
 ```
+
 ## Drop it
 
 Finally, we handle the drop. This handler will only fire if the dragged item is over the container, so we don't need to worry about it being dropped outside. This first line checks if the start and end indexes are the same; if so we don't need to do anything.
 
 The rest of the function is just re-ordering the list and reassigning the array so that Svelte updates it in the DOM.
+
 ```js
 function handleDrop() {
-  if (dragStartIndex === dropIndex) return
-  const draggedItem = items[dragStartIndex]
-  items.splice(dragStartIndex, 1)
-  items.splice(dropIndex, 0, draggedItem)
+  if (dragStartIndex === dropIndex) return;
+  const draggedItem = items[dragStartIndex];
+  items.splice(dragStartIndex, 1);
+  items.splice(dropIndex, 0, draggedItem);
   // send update to backend here
 }
 ```

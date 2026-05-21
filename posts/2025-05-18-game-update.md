@@ -1,6 +1,6 @@
 ---
-title: "Cities 4 Sale game update!"
-description: "A long overdue update for my supply chain logistics game"
+title: 'Cities 4 Sale game update!'
+description: 'A long overdue update for my supply chain logistics game'
 date: '2025-05-18'
 ---
 

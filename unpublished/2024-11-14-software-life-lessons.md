@@ -1,12 +1,12 @@
 ---
-title: "Life lessons from a career in software development"
-description: ""
+title: 'Life lessons from a career in software development'
+description: ''
 date: '2024-11-14'
 ---
 
-I'd like to share some things I've learned after over 16 years in software development. These are revelations I've had either during late-night debugging sessions, working on open source projects, and just regular day-to-day software development. 
+I'd like to share some things I've learned after over 16 years in software development. These are revelations I've had either during late-night debugging sessions, working on open source projects, and just regular day-to-day software development.
 
-## 1. Every unexplainable thing that happens has cause. 
+## 1. Every unexplainable thing that happens has cause.
 
 When you are new at software development, certain strange behaviors from your application at first appear totally random, at times it seems like they could only be explained by the metaphysical. But through trial and error, and deep dives, you learn there's always a rational cause. And you rediscover this over and over again. That was a huge revelation for me.
 

@@ -1,6 +1,6 @@
 ---
-title: "A simple hash-routed dialog system with Svelte"
-description: "Route to dialogs in Svelte with a hash store and the native dialog element"
+title: 'A simple hash-routed dialog system with Svelte'
+description: 'Route to dialogs in Svelte with a hash store and the native dialog element'
 date: '2023-10-08'
 ---
 
@@ -15,39 +15,40 @@ The second thing is, I wanted a dialog component without using any third-party U
 ## Hash store
 
 lib/state/hash.js:
+
 ```js
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 export function createHashStore() {
   if (typeof window === 'undefined') {
-    const { subscribe } = writable('')
-    return { subscribe }
+    const { subscribe } = writable('');
+    return { subscribe };
   }
 
-  const hash = writable(window.location.hash)
+  const hash = writable(window.location.hash);
 
   function updateHash() {
-    hash.set(window.location.hash)
+    hash.set(window.location.hash);
   }
-  window.removeEventListener('hashchange', updateHash, true)
-  window.addEventListener('hashchange', updateHash, true)
+  window.removeEventListener('hashchange', updateHash, true);
+  window.addEventListener('hashchange', updateHash, true);
 
-  return hash
+  return hash;
 }
 
-export default createHashStore()
+export default createHashStore();
 ```
 
 This code creates a store that updates every time the hash of the url changes, and is based on a [url store](https://github.com/bluwy/svelte-url/blob/master/src/url.js) snippet by Svelte core team member Bjorn Lu. You can import this store in as many components as you like and it only ever creates one store. You use it like this:
 
 MyComponent.svelte:
+
 ```html
 <script>
-  import hash from '$lib/state/hash.js'
+  import hash from '$lib/state/hash.js';
 
-  $: dialogOpen = $hash === '#login'
+  $: dialogOpen = $hash === '#login';
 </script>
-
 ```
 
 Now `dialogOpen` automatically updates to `true` if the hash matches "#login". From here, you can bind `dialogOpen` to the dialog's `open` attribute, or use it to call the dialog's `showModal()` method.
@@ -59,21 +60,21 @@ Now `dialogOpen` automatically updates to `true` if the hash matches "#login". F
 By just getting a reference to the dialog element, you have access to special methods, `dialog.showModal()` and `dialog.close()`. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) for more. Although it's very simple to just bind our `dialogOpen` property to the dialog's `open` attribute, I've found it's more accessible to use the `showModal()` method, because that way the close button is auto-focused and you can press escape to close the dialog.
 
 MyComponent.svelte:
+
 ```html
 <script>
-  import hash from '$lib/state/hash.js'
+  import hash from '$lib/state/hash.js';
 
-  let dialog
+  let dialog;
 
   $: if ($hash === '#login') {
-    dialog?.showModal()
+    dialog?.showModal();
   } else {
-    dialog?.close()
+    dialog?.close();
   }
 </script>
 
-<dialog bind:this={dialog}>
-  ...
+<dialog bind:this="{dialog}">...</dialog>
 ```
 
 ## In closing (the dialog)
@@ -90,8 +91,7 @@ We can listen for the dialog's close event to update the hash and react to any i
   }
 </script>
 
-<dialog bind:this={dialog} on:close={handleClose}>
-  ...
+<dialog bind:this="{dialog}" on:close="{handleClose}">...</dialog>
 ```
 
 It's worth mentioning, if you have a form inside your dialog, there are some special things you can do. For instance if you set the form's `method` attribute to "dialog", submitting it will close the dialog. In addition, if you place a button like this in your form, it will close the dialog:
@@ -99,11 +99,12 @@ It's worth mentioning, if you have a form inside your dialog, there are some spe
 ```html
 <button value="foo" formmethod="dialog">Close</button>
 ```
+
 For either of these methods, `dialog.returnValue` will get set with the value of the button, in this case "foo".
 
 ## Conclusion
 
-Dialogs are shown and hidden with the display property, but there is a lot of opportunity for styling improvement here. Open dialogs have the `open` attribute which can be used for an open dialog selector in your CSS, e.g. `dialog[open]`. 
+Dialogs are shown and hidden with the display property, but there is a lot of opportunity for styling improvement here. Open dialogs have the `open` attribute which can be used for an open dialog selector in your CSS, e.g. `dialog[open]`.
 
 I personally really like how [Daisy UI](https://daisyui.com/components/modal/), a Tailwind add-on handles dialogs. You get a really nice fade-and-scale animation simply by adding the "modal" class, no javascript required.
 

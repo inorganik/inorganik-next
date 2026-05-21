@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import DateDisplay from '../components/date'
+import Link from 'next/link';
+import DateDisplay from '../components/date';
 
 export default function PostList({ allPostsData, limit = 0 }) {
   const posts = limit ? allPostsData.slice(0, limit) : allPostsData;
@@ -10,7 +10,9 @@ export default function PostList({ allPostsData, limit = 0 }) {
           <span className="text-2xl text-primary mr-2">→</span>
           <div>
             <p className="text-xl md:text-2xl m-0">
-              <Link className="hover-glow no-underline font-light" href={`/posts/${id}`}>{title}</Link>
+              <Link className="hover-glow no-underline font-light" href={`/posts/${id}`}>
+                {title}
+              </Link>
             </p>
             <DateDisplay dateString={date} />
           </div>
