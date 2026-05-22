@@ -77,7 +77,7 @@ export default function JeffcoAcfrReport() {
               Over the last 10 years, the General Administration expense category has more than
               doubled from $25.5 million to $61 million.
             </li>
-            <li>Special education spending has increased to 21% of the instruction budget.</li>
+            <li>Special education spending has increased by 57% in the last 5 years.</li>
           </ul>
           <p>
             My data for this report is compiled in{' '}
@@ -87,6 +87,20 @@ export default function JeffcoAcfrReport() {
             >
               {' '}
               this google sheet
+            </a>
+            . The ACFRs on JeffCo's{' '}
+            <a
+              href="https://www.jeffcopublicschools.org/services/financial-services/financial-transparency"
+              target="_blank"
+            >
+              website
+            </a>{' '}
+            only go back a handful of years, but you can get the rest on the{' '}
+            <a
+              href="https://web.archive.org/web/20260000000000*/https://www.jeffcopublicschools.org/"
+              target="_blank"
+            >
+              web archive
             </a>
             . For up-to-date reporting on the district, I encourage you to check out{' '}
             <a href="https://cotlns-newsletter-education.beehiiv.com/" target="_blank">
