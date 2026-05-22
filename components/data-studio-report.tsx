@@ -2,12 +2,14 @@
 
 interface ReportEmbedProps {
   reportUrl: string;
+  /** Must match the report canvas height at the embed width (see Looker Studio → Embed report). */
+  height?: number;
 }
 
-export default function ReportEmbed({ reportUrl }: ReportEmbedProps) {
+export default function ReportEmbed({ reportUrl, height = 3123 }: ReportEmbedProps) {
   return (
     <div className="report-wrapper">
-      <div className="report-container">
+      <div className="report-container" style={{ height }}>
         <iframe
           src={reportUrl}
           title="School District Report"
@@ -34,31 +36,12 @@ export default function ReportEmbed({ reportUrl }: ReportEmbedProps) {
           position: relative;
           width: 100%;
           max-width: 1200px;
-
-          height: 2575px;
-
           overflow: hidden;
           background-color: #121212; /* Clean dark mode loading canvas */
-          scrollbar-color: #646464 #1c1c1c;
-          scrollbar-width: thin;
         }
 
-        .report-container::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-
-        .report-container::-webkit-scrollbar-track {
-          background: #1c1c1c;
-        }
-
-        .report-container::-webkit-scrollbar-thumb {
-          background: #646464;
-          border-radius: 4px;
-        }
-
-        /* Forces the iframe to strictly inherit and fill the container geometry */
         .report-iframe {
+          display: block;
           width: 100%;
           height: 100%;
           border: none;

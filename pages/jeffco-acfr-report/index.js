@@ -16,6 +16,7 @@ export default function JeffcoAcfrReport() {
         <title>20 years of JeffCo ACFR Data</title>
         <meta name="description" content="JeffCo ACFR data from 2006-2025" />
         <meta name="og:title" content="20 years of JeffCo ACFR Data" />
+        <meta property="og:image" content="https://inorganik.net/images/jeffco-acfr-preview.png" />
       </Head>
 
       <header className="flex flex-col items-center">
@@ -69,13 +70,10 @@ export default function JeffcoAcfrReport() {
               gone up by 49.
             </li>
             <li>
-              Over the last 10 years, special education spending has increased from 16% to 21% of
-              the instruction budget.
-            </li>
-            <li>
               Over the last 10 years, the General Administration expense category has more than
               doubled from $25.5 million to $61 million.
             </li>
+            <li>Special education spending has increased to 21% of the instruction budget.</li>
           </ul>
           <p>
             My data for this report is compiled in{' '}
@@ -92,7 +90,7 @@ export default function JeffcoAcfrReport() {
             </a>
             .
           </p>
-          <DataStudioReport reportUrl={REPORT_URL} />
+          <DataStudioReport reportUrl={REPORT_URL} height={3166} />
         </article>
       </section>
       <Footer />
