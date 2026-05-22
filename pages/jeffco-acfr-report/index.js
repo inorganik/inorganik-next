@@ -14,9 +14,13 @@ export default function JeffcoAcfrReport() {
     <div className="mb-6 mx-auto px-4 max-w-6xl relative flex flex-col min-h-full">
       <Head>
         <title>20 years of JeffCo ACFR Data</title>
-        <meta name="description" content="JeffCo ACFR data from 2006-2025" />
-        <meta name="og:title" content="20 years of JeffCo ACFR Data" />
-        <meta property="og:image" content="https://inorganik.net/images/jeffco-acfr-preview.png" />
+        <meta name="description" content="JeffCo ACFR data from 2006-2025" key="description" />
+        <meta property="og:title" content="20 years of JeffCo ACFR Data" key="og:title" />
+        <meta
+          property="og:image"
+          content="https://inorganik.net/images/jeffco-acfr-preview.png"
+          key="og:image"
+        />
       </Head>
 
       <header className="flex flex-col items-center">

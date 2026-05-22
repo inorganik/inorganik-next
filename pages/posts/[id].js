@@ -64,9 +64,9 @@ export default function Post({ postData, prevId, nextId }) {
             postData.description ||
             "I'm Jamie Perkins. Software engineer, bootstrapper and dedicated dad."
           }
+          key="description"
         />
-
-        <meta name="og:title" content={postData.title} />
+        <meta property="og:title" content={postData.title} key="og:title" />
       </Head>
 
       <section className="prose mt-12 max-w-none grid grid-cols-2 sm:grid-cols-4 gap-12">

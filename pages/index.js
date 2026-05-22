@@ -8,7 +8,7 @@ import ProjectCard from '../components/project-card';
 import Subhead from '../components/subhead';
 import { getSortedPostsData } from '../lib/posts';
 import { githubLinks, projects, socialLinks } from '../lib/static-content';
-import { siteTitle } from './_document';
+import { siteTitle } from '../lib/seo';
 
 export default function Home({ allPostsData }) {
   return (

@@ -30,18 +30,17 @@ export default function GhostAr() {
     <div className="mb-6 mx-auto px-4 w-full sm:max-w-7xl">
       <Head>
         <title>Ghost AR for iOS</title>
-        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="An augmented reality app for iOS that lets you see ghosts."
+          key="description"
         />
-        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Ghost AR for iOS" key="og:title" />
         <meta
           property="og:image"
           content="https://inorganik.net/images/ghost-ar/ghost-ar-site-preview.png"
+          key="og:image"
         />
-        <meta name="og:title" content="Ghost AR for iOS" />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <main className="app">
