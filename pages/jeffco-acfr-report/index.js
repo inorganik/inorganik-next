@@ -54,8 +54,8 @@ export default function JeffcoAcfrReport() {
               $68 million budget shortfall
             </a>{' '}
             and as a dad of 2 JeffCo students, I wanted to understand the budget better. So I
-            compiled 20 years of data from JeffCo's Annual Comprehensive Financial Reports. I summed
-            up my thoughts in a{' '}
+            compiled 20 years of data from JeffCo's Annual Comprehensive Financial Reports, along
+            with some open records requests. I summed up my thoughts in a{' '}
             <a href="/posts/2026-05-21-jeffco-acfr-data" target="_blank">
               blog post
             </a>
