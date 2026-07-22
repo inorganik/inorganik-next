@@ -1,19 +1,19 @@
 ---
 title: 'Legoified: Predicting the next Lego sets'
-description: "Here's a list of Lego sets we're likely to see at some point in the future."
+description: "Here's a list of Lego sets we're likely to see at some point in the future, along with IP they've already licensed."
 date: '2026-07-22'
 ---
 
-Lego is leaving no stone unturned in their quest to "legoify" every popular franchise. It's like Atwood's law but in brick form - everything that can be lego'd, will be.
+Lately, Lego's strategy has seemed to angle toward aggressively licensing IP, and they are leaving no stone unturned in their quest to "legoify" every popular franchise. It's like Atwood's law but in brick form - everything that can be lego'd, will be. Lego released over 150 sets in January, and sometimes I worry that the sheer number of sets dillutes the brand.
 
 ![The most ridiculous Lego set](/images/posts/legoified/nike-airmax-lego.png)
-_The most ridiculous Lego set_
+_Brand deals go both ways_
 
 Lego has already released sets for over 50 different TV, film and video game franchises, and they aren't holding back. They're dusting off old IP from the 90s and beyond (X-Files, Looney Tunes), and also tapping into new favorites (Wicked, Wednesday).
 
-That's not to say anything about popular art, architecture, and cars, which Lego is leaning heavily into. I'm not going to try to predict these because they are "evergreen" categories with a practically never-ending supply of things that can be made into Lego sets.
+That's not to say anything about popular art, architecture, and cars, which Lego is also leaning heavily into. I'm not going to try to predict those because they are "evergreen" categories with a practically never-ending supply of things that can be made into Lego sets. But since licensing IP is a predictable strategy, I thought it would be fun to try and predict future Lego sets.
 
-Let's get down to strategy. At first, I tried to prompt Gemini and ChatGPT with a list of the current sets, and asked them to predict what's next. They certainly pointed out some interesting picks, and I jotted down the overlapping ones. But a far better strategy I found was to simply have them rank the most popular franchises over the last 30 years.
+At first, I tried to prompt Gemini and ChatGPT with a list of the current sets, and asked them to predict what's next. They certainly pointed out some interesting picks, and I jotted down the overlapping ones. But a far better strategy I found was to simply have them rank the most popular franchises over the last 30 years.
 
 Lego licensed every one of them.
 
@@ -28,24 +28,22 @@ Without further ado, here's my Top 5, followed by some further picks.
 ## Top 5 Lego predictions
 
 1. **Studio Ghibli** - Already theme-parkified in Japan and globally popular. Picked by both Gemini and ChatGPT.
-2. **Godzilla** - Umpteen films, including an upcoming film in 2027, and global popularity for sure.
-3. **Harley-Davidson** - I know I said I was ignoring evergreen categories like cars - but these are motorcycles ;). A staple of popular culture, even globally.
-4. **Kung Fu Panda** - Consisting of 4 films and with a dedicated zone in Motiongate Dubai.
-5. **Madagascar** - Another one of DreamWorks' big ones, also has a dedicated zone in Motiongate Dubai.
+2. **Harley-Davidson** - I know I said I was ignoring evergreen categories like cars - but these are motorcycles ;). A staple of popular culture, even globally.
+3. **Kung Fu Panda** - Consisting of 4 films and with a dedicated zone in Motiongate Dubai.
+4. **Madagascar** - Another one of DreamWorks' big ones, also has a dedicated zone in Motiongate Dubai.
+5. **The Matrix** - A huge franchise popular with adults, with lots of cool vehicles that can be legoified.
 
-### More picks
+## More picks
 
 In no particular order:
 
 - Care Bears
-- The Matrix
 - Zootopia
-- Hot Wheels
 - Daft Punk
 - Coca-Cola
 - Fallout
+- Roblox
 - Dragon Ball Z
-- The Smurfs
 - The Muppets
 - Wallace & Gromit
 - Ice Age
@@ -54,8 +52,30 @@ In no particular order:
 - Kirby
 - Terminator
 - He-Man
+- Angry Birds
 
-And finally, here's as complete a list as I could find of IP already licensed by Lego:
+## Notable omissions
+
+- Barbie
+- Hot Wheels
+
+Both of these brands are owned by Mattel, a rival of Lego. Mattel has their own version of Lego, Mega blocks, so these 2 brands are DQ'd.
+
+## Forthcoming
+
+These are Ideas submissions that surpassed 10k votes and have already been approved.
+
+- [Power Rangers](https://ideas.lego.com/product-ideas/47b3e671-6d65-47d1-be34-1775397c232f)
+- [Godzilla](https://ideas.lego.com/product-ideas/649e11f4-716e-461d-a9ee-0ca32911c075)
+- [The Smurfs](https://ideas.lego.com/product-ideas/f7ef1d6d-2013-47cf-99e3-e86567ce008f)
+- [Downton Abbey](https://ideas.lego.com/product-ideas/2fab442c-268a-46e2-a33c-8417c0529eef)
+- [National Lampoon's Christmas Vacation](https://ideas.lego.com/product-ideas/4e51e9fe-f325-4ae6-a835-45cac06da106)
+- [Edward Scissorhands](https://ideas.lego.com/product-ideas/acf26ca3-5a45-42ad-a0c4-8977df3f81d4)
+- [Jumanji](https://ideas.lego.com/product-ideas/f57161ab-155a-4340-a163-e8b1bfcfc66a)
+
+## Already Lego'd
+
+Finally, here's as complete a list as I could find of IP already licensed by Lego:
 
 ### Movies and TV
 
