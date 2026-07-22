@@ -9,7 +9,7 @@ Lately, Lego's strategy has seemed to angle toward aggressively licensing IP, an
 ![The most ridiculous Lego set](/images/posts/legoified/nike-airmax-lego.png)
 _Brand deals go both ways_
 
-Lego has already released sets for over 50 different TV, film and video game franchises, and they aren't holding back. They're dusting off old IP from the 90s and beyond (X-Files, Looney Tunes), and also tapping into new favorites (Wicked, Wednesday).
+Lego has already released sets for over 60 different TV, film and video game franchises, and they aren't holding back. They're dusting off old IP from the 90s and beyond (X-Files, Looney Tunes), and also tapping into new favorites (Wicked, Wednesday).
 
 That's not to say anything about popular art, architecture, and cars, which Lego is also leaning heavily into. I'm not going to try to predict those because they are "evergreen" categories with a practically never-ending supply of things that can be made into Lego sets. But since licensing IP is a predictable strategy, I thought it would be fun to try and predict future Lego sets.
 
