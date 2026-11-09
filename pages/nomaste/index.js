@@ -28,6 +28,7 @@ export default function Nomaste() {
                 alt="Download on the App Store"
               />
             </a>
+            {/* android version not currently available
             <a
               className="mx-4"
               href="https://play.google.com/store/apps/details?id=inorganik.nomaste"
@@ -37,7 +38,7 @@ export default function Nomaste() {
                 className="w-auto h-16"
                 alt="Download on the Play Store"
               />
-            </a>
+            </a> */}
           </div>
 
           <div className="text-center">
@@ -45,7 +46,7 @@ export default function Nomaste() {
               It&rsquo;s never been easier to figure out what&rsquo;s for dinner.
             </p>
             <p className="my-4">
-              The easiest way to plan meals in a group. For Android, iOS and{' '}
+              The easiest way to plan meals in a group. Available on iOS and{' '}
               <a className="underline" href="https://nomaste.inorganik.net" target="_blank">
                 online
               </a>
@@ -63,13 +64,14 @@ export default function Nomaste() {
 
         <div>
           <div className="relative h-[560px] w-[350px] sm:w-[580px] sm:h-[810px] lg:w-full m-auto">
+            {/* android version not currently available
             <Image
               src="/images/nomaste/Nomaste-on-Android-mock-2.png"
               width={405}
               height={799}
               alt="Nomaste on Android"
               className="absolute w-[250px] sm:w-[405px] z-40"
-            />
+            /> */}
             <Image
               src="/images/nomaste/Nomaste-on-iPhone-mock-2.png"
               width={400}
