@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
-import querystring from 'querystring';
 
 interface SpotifyTokenResponse {
   access_token: string;
@@ -14,15 +13,15 @@ interface SpotifyTokenResponse {
  * Request a Spotify access token
  */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = req.query.code || null;
-  const state = req.query.state || null;
+  const code = Array.isArray(req.query.code) ? req.query.code[0] : req.query.code;
+  const state = Array.isArray(req.query.state) ? req.query.state[0] : req.query.state;
   const redirect_uri = `${process.env.ROOT_URL}api/spotify/login-callback`;
 
-  const data = {
+  const data = new URLSearchParams({
     grant_type: 'authorization_code',
-    code,
+    code: code ?? '',
     redirect_uri,
-  };
+  });
 
   let access_token = '';
   let refresh_token = '';
@@ -33,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const authOptions = {
       url: 'https://accounts.spotify.com/api/token',
       method: 'post',
-      data: querystring.stringify(data),
+      data: data.toString(),
       headers: {
         Authorization:
           'Basic ' +

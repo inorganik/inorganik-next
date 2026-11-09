@@ -19,7 +19,7 @@ export default function MyApps({ imageUrl, color, label, link }) {
     <>
       <h4>My Apps</h4>
       {apps.map(({ imageUrl, color, label, link }) => (
-        <Link href={link} className="block my-6">
+        <Link key={label} href={link} className="block my-6">
           <div className="relative w-24">
             <img src={imageUrl} alt={label} className="absolute w-full h-full m-0" />
             <svg

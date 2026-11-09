@@ -1,0 +1,233 @@
+@import 'tailwindcss';
+@import 'flickity/css/flickity.css';
+
+@plugin '@tailwindcss/typography';
+
+@plugin 'daisyui' {
+  themes: false;
+  logs: false;
+}
+
+/*
+  Colors are the OKLCH values daisyUI 4 generated from the old hex theme,
+  so buttons, text, and page backgrounds stay the same.
+*/
+@plugin 'daisyui/theme' {
+  name: 'inorganik';
+  default: true;
+  color-scheme: light;
+
+  --color-primary: oklch(52.7879% 0.141411 270.482);
+  --color-primary-content: oklch(90.5576% 0.028282 270.482);
+  --color-secondary: oklch(75.739% 0.173352 129.948);
+  --color-secondary-content: oklch(15.1478% 0.03467 129.948);
+  --color-accent: oklch(67.972% 0.20998 32.4);
+  --color-accent-content: oklch(13.5944% 0.041996 32.4);
+  --color-neutral: oklch(82.3442% 0 0);
+  --color-neutral-content: oklch(16.4688% 0 0);
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(93% 0 0);
+  --color-base-300: oklch(86% 0 0);
+  --color-base-content: oklch(47.478% 0 0);
+  --color-info: oklch(72.06% 0.191 231.6);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(64.8% 0.15 160);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(84.71% 0.199 83.87);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71.76% 0.221 22.18);
+  --color-error-content: oklch(0% 0 0);
+
+  --radius-selector: 1.9rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'inorganikDark';
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-primary: oklch(75.6404% 0.164973 130.208);
+  --color-primary-content: oklch(15.1281% 0.032995 130.208);
+  --color-secondary: oklch(65.9459% 0.11733 264.63);
+  --color-secondary-content: oklch(13.1892% 0.023466 264.63);
+  --color-accent: oklch(67.972% 0.20998 32.4);
+  --color-accent-content: oklch(13.5944% 0.041996 32.4);
+  --color-neutral: oklch(50.3229% 0 0);
+  --color-neutral-content: oklch(90.0646% 0 0);
+  --color-base-100: oklch(22.645% 0 0);
+  --color-base-200: oklch(21.0598% 0 0);
+  --color-base-300: oklch(19.4747% 0 0);
+  --color-base-content: oklch(87.9169% 0 0);
+  --color-info: oklch(72.06% 0.191 231.6);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(64.8% 0.15 160);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(84.71% 0.199 83.87);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71.76% 0.221 22.18);
+  --color-error-content: oklch(0% 0 0);
+
+  --radius-selector: 1.9rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'nomaste';
+  color-scheme: light;
+
+  --color-primary: oklch(100% 0 0);
+  --color-primary-content: oklch(20% 0 0);
+  --color-secondary: oklch(100% 0 0);
+  --color-secondary-content: oklch(20% 0 0);
+  --color-accent: oklch(100% 0 0);
+  --color-accent-content: oklch(20% 0 0);
+  --color-neutral: oklch(100% 0 0);
+  --color-neutral-content: oklch(20% 0 0);
+  --color-base-100: oklch(67.972% 0.20998 32.4);
+  --color-base-200: oklch(63.214% 0.195281 32.4);
+  --color-base-300: oklch(58.4559% 0.180582 32.4);
+  --color-base-content: oklch(100% 0 0);
+  --color-info: oklch(72.06% 0.191 231.6);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(64.8% 0.15 160);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(84.71% 0.199 83.87);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71.76% 0.221 22.18);
+  --color-error-content: oklch(0% 0 0);
+
+  --radius-selector: 1.9rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'ghostAr';
+  color-scheme: dark;
+
+  --color-primary: oklch(100% 0 0);
+  --color-primary-content: oklch(20% 0 0);
+  --color-secondary: oklch(100% 0 0);
+  --color-secondary-content: oklch(20% 0 0);
+  --color-accent: oklch(100% 0 0);
+  --color-accent-content: oklch(20% 0 0);
+  --color-neutral: oklch(100% 0 0);
+  --color-neutral-content: oklch(20% 0 0);
+  --color-base-100: oklch(0% 0 0);
+  --color-base-200: oklch(0% 0 0);
+  --color-base-300: oklch(0% 0 0);
+  --color-base-content: oklch(100% 0 0);
+  --color-info: oklch(72.06% 0.191 231.6);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(64.8% 0.15 160);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(84.71% 0.199 83.87);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71.76% 0.221 22.18);
+  --color-error-content: oklch(0% 0 0);
+
+  --radius-selector: 1.9rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme {
+  --breakpoint-lg: 1030px;
+  --font-sans: 'Work Sans', sans-serif;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 3rem;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 5rem;
+}
+
+@layer base {
+  h1 {
+    @apply font-extralight tracking-wide leading-normal;
+  }
+  h2,
+  h3 {
+    @apply font-light tracking-wide leading-normal;
+  }
+}
+
+.prose h1 {
+  font-weight: 200;
+  letter-spacing: 0.025em;
+}
+
+.prose h2,
+.prose h3 {
+  font-weight: 300;
+}
+
+@layer utilities {
+  .flex-grow {
+    flex: 1 0 auto;
+  }
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html,
+body,
+div#__next {
+  height: 100%;
+}
+
+main.app {
+  animation: fadeInContent 0.5s ease-in-out;
+}
+
+a.hover-glow {
+  transition: all 0.2s linear;
+
+  &:hover {
+    filter: drop-shadow(0 0 5px rgba(77, 99, 188, 0.75));
+
+    @media (prefers-color-scheme: dark) {
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
+    }
+  }
+
+  &.text-primary:hover {
+    @media (prefers-color-scheme: dark) {
+      filter: drop-shadow(0 0 5px rgba(140, 196, 72, 0.75));
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  background-color: hsla(0deg, 0%, 100%, 0.5);
+}

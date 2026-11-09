@@ -5,14 +5,6 @@ import { useEffect, useRef } from 'react';
 import { supportMailLink } from '../../lib/static-content';
 
 export default function GhostAr() {
-  useEffect(() => {
-    initFlickity();
-    document.documentElement.setAttribute('data-theme', 'ghostAr');
-    return () => {
-      document.documentElement.removeAttribute('data-theme');
-    };
-  }, []);
-
   const carousel = useRef(null);
 
   async function initFlickity() {
@@ -25,6 +17,14 @@ export default function GhostAr() {
       });
     }
   }
+
+  useEffect(() => {
+    initFlickity();
+    document.documentElement.setAttribute('data-theme', 'ghostAr');
+    return () => {
+      document.documentElement.removeAttribute('data-theme');
+    };
+  }, []);
 
   return (
     <div className="mb-6 mx-auto px-4 w-full sm:max-w-7xl">
