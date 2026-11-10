@@ -4,7 +4,7 @@ import DateDisplay from '../components/date';
 export default function PostList({ allPostsData, limit = 0 }) {
   const posts = limit ? allPostsData.slice(0, limit) : allPostsData;
   return (
-    <ul className="not-prose list-none p-0 mb-12">
+    <ul className="list-none p-0 mb-12">
       {posts.map(({ id, date, title }) => (
         <li className="my-5 pl-0 flex items-start" key={id}>
           <span className="text-2xl text-primary mr-2">→</span>

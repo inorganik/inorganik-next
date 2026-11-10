@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @import 'flickity/css/flickity.css';
 
-@plugin '@tailwindcss/typography';
+@plugin './prose-plugin.js';
 
 @plugin 'daisyui' {
   themes: false;
@@ -155,7 +155,9 @@
 }
 
 @theme {
-  --breakpoint-lg: 1030px;
+  /* 1030px, written in rem so it sorts with Tailwind's other rem breakpoints.
+     A px value was emitted before the sm/md queries, so sm: widths overrode lg:. */
+  --breakpoint-lg: 64.375rem;
   --font-sans: 'Work Sans', sans-serif;
   --text-4xl: 2.25rem;
   --text-4xl--line-height: 3rem;
@@ -165,11 +167,11 @@
 
 @layer base {
   h1 {
-    @apply font-extralight tracking-wide leading-normal;
+    @apply font-extralight tracking-wide;
   }
   h2,
   h3 {
-    @apply font-light tracking-wide leading-normal;
+    @apply font-light tracking-wide;
   }
 }
 
@@ -230,4 +232,30 @@ a.hover-glow {
 
 .flickity-prev-next-button {
   background-color: hsla(0deg, 0%, 100%, 0.5);
+}
+
+/* daisyUI 5 sizes fields from --size-field, which makes the default button 40px.
+   daisyUI 4 used 48px / 32px / 24px. Override the computed size so both the
+   default and small controls match the previous scale. */
+.btn {
+  --size: 3rem;
+}
+.btn-sm {
+  --size: 2rem;
+  font-size: 0.875rem;
+}
+.btn-xs {
+  --size: 1.5rem;
+}
+/* daisyUI 5 gives inputs a 20rem width, which overflows the phone layout.
+   Let the existing flex-grow / max-w-xs classes size the field instead. */
+.input {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  --size: 3rem;
+}
+.input-sm {
+  --size: 2rem;
+  font-size: 0.875rem;
 }

@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
-    "typecheck": "node ./node_modules/@typescript/native/bin/tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -34,15 +34,14 @@
     "@types/node": "^22.20.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@typescript/native": "npm:typescript@7.0.2",
     "daisyui": "^5.7.50",
-    "eslint": "^10.14.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.5",
     "postcss": "^8.5.32",
     "prettier": "^3.9.10",
     "sass": "^1.108.1",
     "tailwindcss": "^4.3.5",
-    "typescript": "npm:@typescript/typescript6@6.0.2"
+    "typescript": "^6.0.3"
   },
   "overrides": {
     "@types/react": "19.3.0",
