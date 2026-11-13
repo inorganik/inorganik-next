@@ -1,16 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './circuitree.module.scss';
 
 export default function Circuitree() {
-  const [color, setColor] = useState('#8bc53f');
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setColor('#8cc448');
-    }
-    initCircuitree();
-  }, []);
-
   const circuitree1 = useRef(null);
   const circuitree2 = useRef(null);
   const circuitree3 = useRef(null);
@@ -19,9 +10,12 @@ export default function Circuitree() {
   let circuitree_phase1, circuitree_phase2, circuitree_phase3, circuitree_phase4;
 
   async function initCircuitree() {
+    const strokeColor = window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? '#8cc448'
+      : '#8bc53f';
     const lpOptions = {
       strokeWidth: 2,
-      strokeColor: color,
+      strokeColor,
       speedMultiplier: 2,
       drawSequential: false,
     };
@@ -41,6 +35,10 @@ export default function Circuitree() {
     circuitree_phase3.paint();
     circuitree_phase4.paint();
   }
+
+  useEffect(() => {
+    initCircuitree();
+  }, []);
 
   return (
     <section className={styles.circuitree} onClick={() => paint()}>

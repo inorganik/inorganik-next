@@ -54,8 +54,8 @@ export default function JeffcoAcfrReport() {
               $68 million budget shortfall
             </a>{' '}
             and as a dad of 2 JeffCo students, I wanted to understand the budget better. So I
-            compiled 20 years of data from JeffCo's Annual Comprehensive Financial Reports, along
-            with some open records requests. I summed up my thoughts in a{' '}
+            compiled 20 years of data from JeffCo&apos;s Annual Comprehensive Financial Reports,
+            along with some open records requests. I summed up my thoughts in a{' '}
             <a href="/posts/2026-05-21-jeffco-acfr-data" target="_blank">
               blog post
             </a>
@@ -88,7 +88,7 @@ export default function JeffcoAcfrReport() {
               {' '}
               this google sheet
             </a>
-            . The ACFRs on JeffCo's{' '}
+            . The ACFRs on JeffCo&apos;s{' '}
             <a
               href="https://www.jeffcopublicschools.org/services/financial-services/financial-transparency"
               target="_blank"
@@ -104,7 +104,7 @@ export default function JeffcoAcfrReport() {
             </a>
             . For up-to-date reporting on the district, I encourage you to check out{' '}
             <a href="https://cotlns-newsletter-education.beehiiv.com/" target="_blank">
-              Suzie Glassman's reporting
+              Suzie Glassman&apos;s reporting
             </a>
             .
           </p>

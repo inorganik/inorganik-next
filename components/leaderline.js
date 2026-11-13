@@ -1,13 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+function subscribeToColorScheme(onChange) {
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  media.addEventListener('change', onChange);
+  return () => media.removeEventListener('change', onChange);
+}
 
 export default function Leaderline({ className }) {
-  const [color, setColor] = useState('#4d63bc');
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setColor('#6e90da');
-    }
-  }, []);
+  const isDark = useSyncExternalStore(
+    subscribeToColorScheme,
+    () => window.matchMedia('(prefers-color-scheme: dark)').matches,
+    () => false
+  );
+  const color = isDark ? '#6e90da' : '#4d63bc';
   return (
     <div
       className={className + ' w-full h-[15px] rounded-br-xl overflow-hidden'}

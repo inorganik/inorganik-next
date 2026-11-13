@@ -54,7 +54,7 @@ export default function Home({ allPostsData }) {
                   type="email"
                   name="EMAIL"
                   placeholder="Email"
-                  className="input input-sm input-bordered rounded-lg flex-grow max-w-xs"
+                  className="input input-sm rounded-lg flex-grow max-w-xs"
                   id="mce-EMAIL"
                 />
                 <input
